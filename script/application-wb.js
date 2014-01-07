@@ -4,58 +4,89 @@
 
 $(document).ready(function() {"use strict";
 
-    var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$;
-//data-buttonPos
+    var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
+    //data-buttonPos
     popups_$ = $('.popup').detach();
-    popups_$.each (
-        function (index, element) {
-        
-          
-            var  button_$ = $ ('<div></div>'), element_$ = $(element), pos_array = element_$.attr ('data-buttonPos').split (',');  
-            //alert (pos_array[0]);    
-            button_$.addClass ('button');
-          button_$.css('top', Number (pos_array[1]));
-          button_$.css('left', Number (pos_array[0])); 
-
-               $('body').append (button_$); 
-            
-        }
-        
-    ); 
     
-    buttons_$ = $('.button'); 
-    
-    buttons_$.bind('mouseover', function() {
-        var popup_$ = $(popups_$[0]), this_$ = $(this), top_num, left_num;
-        
+     function removeLast() {
         if (lastPopup_$ !== undefined) {
-         lastPopup_$.fadeIn (); 
-        //lastPopup_$.detach();
+            var index, button_$;
+
+            index = lastPopup_$.attr('data-index');
+
+            button_$ = buttons_array[index];
+            button_$.removeClass('selected');
+            lastPopup_$.fadeOut(300, function() {
+                
+                $(this).detach();
+                //lastPopup_$.fadeIn(0);
+
+            });
+
         }
-        popup_$.addClass ('selected'); 
+    }
+    
+    popups_$.each(function(index, element) {
+        
+
+        var button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
+        //alert (pos_array[0]);
+        button_$.addClass('button');
+        button_$.css('top', Number(pos_array[1]));
+        button_$.css('left', Number(pos_array[0]));
+        button_$.attr('data-index', index);
+        element_$.attr('data-index', index);
+
+        $('body').append(button_$);
+
+        popups_array.push(element_$);
+        buttons_array.push(button_$);
+
+    });
+
+    buttons_$ = $('.button');
+     buttons_$.bind('mouseout', function() { 
+        removeLast ();  
+     }); 
+
+    buttons_$.bind('mouseover', function() {
+        //console.log ("mouse over"); 
+   
+        var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
+        index = this_$.attr('data-index');
+
+        popup_$ = $(popups_$[index]);
+        popup_$.css ('opacity', 1);
+         popup_$.css ('display', 'block');  
+        if (lastPopup_$ !== undefined) {
+        console.log (lastPopup_$.attr('data-index') +" / " + popup_$.attr('data-index')); 
+       
+        if (lastPopup_$.attr('data-index') !==  popup_$.attr('data-index')) {
+            console.log ("CLOSE"); 
+           
+            removeLast(); 
+        }
+         } 
+        
+
+        this_$.addClass('selected');
         lastPopup_$ = popup_$;
 
-        $('body').append(popup_$);
+        popup_$.insertBefore(this_$);
 
-        top_num = this_$.position().top - POPUP_HEIGHT;
+        top_num = 20;
         left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
+        height_num = 'auto';
+        //this_$.position().top - top_num + this_$.height() + 10;
 
         popup_$.css({
             top : top_num,
-            left : left_num
+            left : left_num,
+            height : height_num
         });
+         lastPopup_$ = popup_$;  
 
     });
-    buttons_$.bind('mouseout', function() {
-        var this_$ = this; 
-        //lastP
-        this_$.removeClass ('selected');
-        lastPopup_$.fadeOut (500, function (){
-            lastPopup_$.detach (); 
-            
-            
-        }); 
-
-    });
+   
 
 });

@@ -28,10 +28,11 @@ img {
     box-shadow: 5px 5px 20px #999;
 }
 
-h2 {
+.popup h2 {
     padding: 0;
     margin: 0;
     font-weight: 400;
+    text-align:left; 
 }
 .button {
     width: 40px;
@@ -52,17 +53,18 @@ h2 {
 }
 
 .popup {
-    width: 300px;
+    width: 260px;
     overflow: hidden;
     position: absolute;
     font-size: .8em;
     top: 100px;
-    background: url('../img/ligne.png');
-    background-position: center;
+    
+    background-position: center top;
     background-repeat: repeat-y;
-    width: 300px;
+
     height: 300px;
-    animation: reveal .5s;
+    animation: reveal .3s;
+    -webkit-animation: reveal .3s;
     text-align: justify;
     color: #666;
 }
@@ -84,13 +86,6 @@ h2 {
 
 
     background: #ffffff; /* Old browsers */
-    Xbackground: -moz-linear-gradient(top,  #00cc99 1%, #00b279 76%); /* FF3.6+ */
-    Xbackground: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#00cc99), color-stop(76%,#00b279)); /* Chrome,Safari4+ */
-    Xbackground: -webkit-linear-gradient(top,  #00cc99 1%,#00b279 76%); /* Chrome10+,Safari5.1+ */
-    Xbackground: -o-linear-gradient(top,  #00cc99 1%,#00b279 76%); /* Opera 11.10+ */
-    Xbackground: -ms-linear-gradient(top,  #00cc99 1%,#00b279 76%); /* IE10+ */
-    Xbackground: linear-gradient(to bottom,  #00cc99 1%,#00b279 76%); /* W3C */
-    Xfilter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cc99', endColorstr='#00b279',GradientType=0 ); /* IE6-9 */
     padding: 30px 30px 30px 30px;
     position: relative;
     XXborder: #FFffff 2px solid;
