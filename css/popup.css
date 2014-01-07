@@ -1,0 +1,99 @@
+@keyframes
+reveal {
+from {
+    height: 0px;
+}
+to {
+    height: 300px;
+}
+}
+@keyframes
+fadeOut_anim {from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600&subset=latin,latin-ext)
+
+body {
+background-color: #FFFFFF;
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+}
+img {
+    border: #FFFFFF 10px solid;
+    box-shadow: 5px 5px 20px #999;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+}
+.button {
+    width: 40px;
+    height: 40px;
+    xbackground: #ff0000;
+    background: url('../img/button0001.png');
+    background-size: 100%;
+    Xbackground-height: 40px;
+    position: absolute;
+    top:100px; 
+    left:100px; 
+    cursor: pointer;
+    shadow: 5px 5px 20px #333;
+}
+.selected {
+    background: url('../img/button0002.png');
+    background-size: 100%;
+}
+
+.popup {
+    width: 300px;
+    overflow: hidden;
+    position: absolute;
+    font-size: .8em;
+    top: 100px;
+    background: url('../img/ligne.png');
+    background-position: center;
+    background-repeat: repeat-y;
+    width: 300px;
+    height: 300px;
+    animation: reveal .5s;
+    text-align: justify;
+    color: #666;
+}
+.popup a {
+    position: absolute;
+    display: block;
+    font-style: italic;
+    right: 30px;
+    bottom: 10px;
+}
+.popup a:link, .popup a:visited, .popup a:active {
+    color: #00cc99;
+}
+.fadeOut {
+    animation: fadeOut_anim .5s;
+}
+
+.popup .content{
+
+
+    background: #ffffff; /* Old browsers */
+    Xbackground: -moz-linear-gradient(top,  #00cc99 1%, #00b279 76%); /* FF3.6+ */
+    Xbackground: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#00cc99), color-stop(76%,#00b279)); /* Chrome,Safari4+ */
+    Xbackground: -webkit-linear-gradient(top,  #00cc99 1%,#00b279 76%); /* Chrome10+,Safari5.1+ */
+    Xbackground: -o-linear-gradient(top,  #00cc99 1%,#00b279 76%); /* Opera 11.10+ */
+    Xbackground: -ms-linear-gradient(top,  #00cc99 1%,#00b279 76%); /* IE10+ */
+    Xbackground: linear-gradient(to bottom,  #00cc99 1%,#00b279 76%); /* W3C */
+    Xfilter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00cc99', endColorstr='#00b279',GradientType=0 ); /* IE6-9 */
+    padding: 30px 30px 30px 30px;
+    position: relative;
+    XXborder: #FFffff 2px solid;
+    box-shadow: 5px 5px 20px #666;
+}
+
