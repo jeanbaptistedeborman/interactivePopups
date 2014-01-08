@@ -67,6 +67,7 @@ img {
     -webkit-animation: reveal .3s;
     text-align: justify;
     color: #666;
+    box-shadow: 5px 5px 20px #666;
 }
 .popup a {
     position: absolute;
