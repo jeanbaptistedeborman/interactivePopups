@@ -17,8 +17,8 @@ to {
 }
 
 
-@keyframes
-reveal {
+@-webkit-keyframes
+reveal { 
 from {
     height: 0px;
 }
@@ -58,7 +58,6 @@ img {
 .button {
     width: 40px;
     height: 40px;
-    xbackground: #ff0000;
     background: url('../img/button0001.png');
     background-size: 100%;
     Xbackground-height: 40px;
