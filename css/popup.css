@@ -7,6 +7,25 @@ to {
     height: 300px;
 }
 }
+@-webkit-keyframes
+fadeOut_anim {from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+
+
+@keyframes
+reveal {
+from {
+    height: 0px;
+}
+to {
+    height: 300px;
+}
+}
 @keyframes
 fadeOut_anim {from {
     opacity: 1;
@@ -15,6 +34,8 @@ to {
     opacity: 0;
 }
 }
+
+
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600&subset=latin,latin-ext)
 
