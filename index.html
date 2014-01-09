@@ -11,12 +11,12 @@
 		<meta name="description" content="" />
 		<meta name="author" content="W-B" />
 
-		<meta name="viewport" content="width=1200,initial-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="viewport" content="width=1200,user-scalable=no" />
 		<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 		<script src='script/application-wb.js'></script>
 		<script>
 			// BUG orientation portrait/lanscape IOS //
-			if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+			//if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
 				var viewportmeta = document.querySelector('meta[name="viewport"]');
 				if (viewportmeta) {
 					viewportmeta.content = "viewport" content="width=1200, user-scalable=no";
@@ -25,7 +25,7 @@
 						viewportmeta.content = 'width=1200, user-scalable=no';
 					}, false);
 				}
-			}
+			//}
 		</script>
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="stylesheet" href="css/normalize.css" />
