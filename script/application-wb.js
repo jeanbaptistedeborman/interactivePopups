@@ -19,7 +19,7 @@ $("document").ready(function() {"use strict";
 			lastPopup_$.fadeOut(300, function() {
 
 				$(this).detach();
-				//lastPopup_$.fadeIn(0);
+		
 
 			});
 
@@ -69,11 +69,17 @@ $("document").ready(function() {"use strict";
 
 		this_$.addClass('selected');
 		lastPopup_$ = popup_$;
-
-		popup_$.insertBefore(this_$);
+		popup_$.addClass ('reveal'); 
+		
+		
+$('#application').append (popup_$); 
+		//popup_$.insertBefore(this_$);
 
 		top_num = 20;
-		left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
+		if (!Modernizr.touch) {
+			left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
+		};
+
 		height_num = 'auto';
 		//this_$.position().top - top_num + this_$.height() + 10;
 

@@ -1,50 +1,35 @@
 @keyframes
 reveal {
 from {
-	height: 0px;
+	top: -200px; 
 }
 to {
-	height: 300px;
+	top: 0px; 
+}
+}
+
+
+@-webkit-keyframes
+reveal {
+	
+	from {
+	top: -200px; 
+}
+to {
+	top: 0px; 
 }
 };
 
-@-webkit-keyframes
-fadeOut_anim {from {
-	opacity: 1;
-}
-to {
-	opacity: 0;
-}
-};
 
-@-webkit-keyframes
-reveal {from {
-	height: 0px;
-}
-to {
-	height: 300px;
-}
-}
 
-@keyframes
-fadeOut_anim {from {
-	opacity: 1;
-}
-to {
-	opacity: 0;
-}
-}
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600&subset=latin,latin-ext);
 
-.no-touch body {
-	padding:10px 0px 0px 0px; 
-	
-	
-}
+
+
+
 
 body {
-	background-color: #FF0000;
+	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	width:1000px; 
@@ -52,6 +37,19 @@ body {
 	margin-right: auto;
 	
 }
+
+.reveal {
+	animation: reveal 0.3s;
+	-webkit-animation: reveal 0.3s;
+}
+
+
+.no-touch body {
+	padding:20px 0px 0px 0px; 
+	
+	
+}
+
 
 
 #application {
@@ -61,17 +59,16 @@ body {
  
 }
 
-.no-touch  #application{
-	border: #FFFFFF 10px solid;
-	box-shadow: 5px 5px 20px #999;
-	width:auto;	
-	
-}
+
 
 img {
 	
 	width: 1000px;
 	height: 500px;
+}
+.no-touch img {
+	box-shadow: 5px 5px 20px #999;
+	
 }
 
 .popup h2 {
@@ -81,8 +78,8 @@ img {
 	text-align: left;
 }
 .button {
-	width: 40px;
-	height: 40px;
+	width: 20px;
+	height: 20px;
 	background: url('../img/button0001.png');
 	background-size: 100%;
 	position: absolute;
@@ -99,21 +96,27 @@ img {
 	width: 260px;
 	overflow: hidden;
 	position: absolute;
-	font-size: .7em;
-	top: 100px;
+	font-size: 11px;
+	line-height:1.3em; 
+	Xtop: 100px;
 	background-position: center top;
 	background-repeat: repeat-y;
 	height: 300px;
-	animation: reveal .3s;
-	-webkit-animation: reveal .3s;
+
 	text-align: justify;
 	color: #666;
-	box-shadow: 5px 5px 20px #666;
+	box-shadow: 5px 5px 20px #667;
+	border-radius: 5px; 
 }
 
 
 .touch .popup {
+	font-size: 14px;
+
+	position:absolute; 
 		width: 600px;
+		
+		margin: 0px 200px 0px 200px; 
 	
 	
 	
@@ -129,9 +132,7 @@ img {
 .popup a:link, .popup a:visited, .popup a:active {
 	color: #00cc99;
 }
-.fadeOut {
-	animation: fadeOut_anim .5s;
-}
+
 
 .popup .content {
 
