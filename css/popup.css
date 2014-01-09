@@ -43,10 +43,13 @@ body {
 background-color: #FFFFFF;
 font-family: 'Open Sans', sans-serif;
 font-weight: 400;
+text-align:center; 
 }
 img {
     border: #FFFFFF 10px solid;
     box-shadow: 5px 5px 20px #999;
+    width:1000px; 
+    height:auto; 
 }
 
 .popup h2 {
