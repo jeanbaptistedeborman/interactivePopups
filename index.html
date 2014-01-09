@@ -16,10 +16,11 @@
 		<script src='script/application-wb.js'></script>
 		<script>
 			// BUG orientation portrait/lanscape IOS //
+			alert ('test'); 
 			//if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
 				var viewportmeta = document.querySelector('meta[name="viewport"]');
 				if (viewportmeta) {
-					viewportmeta.content = "viewport" content="width=1200, user-scalable=no";
+					viewportmeta.content ="width=1200, user-scalable=no";
 					document.addEventListener('orientationchange', function() {
 						alert ('change'); 
 						viewportmeta.content = 'width=1200, user-scalable=no';
