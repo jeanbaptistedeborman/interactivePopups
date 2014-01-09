@@ -1,86 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
+	<head>
+		<meta charset="utf-8" />
 
-        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-        Remove this if you use the .htaccess -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title>index</title>
-        <meta name="description" content="" />
-        <meta name="author" content="W-B" />
+		<title>index</title>
+		<meta name="description" content="" />
+		<meta name="author" content="W-B" />
 
-        <meta name="viewport" content="width=1200,user-scalable=no" />
-        <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
-        <script src='script/application-wb.js'></script>
-        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/popup.css" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    </head>
+		<meta name="viewport" content="width=1200,user-scalable=no" />
+		<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+		<script src='script/application-wb.js'></script>
+		<script>
+			// BUG orientation portrait/lanscape IOS //
+			if (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPad/i)) {
+				var viewportmeta = document.querySelector('meta[name="viewport"]');
+				if (viewportmeta) {
+					viewportmeta.content = "viewport" content="width=1200, user-scalable=no";
+					document.addEventListener('orientationchange', function() {
+						viewportmeta.content = 'width=1200, user-scalable=no';
+					}, false);
+				}
+			}
+		</script>
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/popup.css" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+	</head>
 
-    <body>
-    	
-       
-            <header>
-            	version:0; 
+	<body>
 
-            </header>
-            <img src='img/boitsfort.png' />
-            <div class='popup' data-buttonPos='131,420'>
+		<header>
+			version:1;
 
-                <div class='content'>
-                    <h2>La gare de Boitsfort</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                    semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                    <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                </div>
+		</header>
+		<img src='img/boitsfort.png' />
+		<div class='popup' data-buttonPos='131,420'>
 
-            </div>
-            <div class='popup' data-buttonPos='230,450'>
+			<div class='content'>
+				<h2>La gare de Boitsfort</h2>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+				semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+				<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+			</div>
 
-                <div class='content'>
-                    <h2>PLace Keym</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                    semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                    <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                </div>
+		</div>
+		<div class='popup' data-buttonPos='230,450'>
 
-                <div class='popup' data-buttonPos='380,400'>
+			<div class='content'>
+				<h2>PLace Keym</h2>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+				semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+				<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+			</div>
 
-                    <div class='content'>
-                        <h2>Le stade des Trois Tilleuls</h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                        semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                        <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                    </div>
+			<div class='popup' data-buttonPos='380,400'>
 
-                </div>
-                
-                  <div class='popup' data-buttonPos='440,660'>
+				<div class='content'>
+					<h2>Le stade des Trois Tilleuls</h2>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+					semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+					<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+				</div>
 
-                    <div class='content'>
-                        <h2>La maison communale</h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                        semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                        <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                    </div>
+			</div>
 
-                </div>
-                  <div class='popup' data-buttonPos='630,400'>
+			<div class='popup' data-buttonPos='440,660'>
 
-                    <div class='content'>
-                        <h2>Le logis</h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                        semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                        <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                    </div>
+				<div class='content'>
+					<h2>La maison communale</h2>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+					semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+					<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+				</div>
 
-                </div>
+			</div>
+			<div class='popup' data-buttonPos='630,400'>
 
-            </div>
+				<div class='content'>
+					<h2>Le logis</h2>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+					semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+					<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+				</div>
 
-    </body>
+			</div>
+
+		</div>
+
+	</body>
 </html>
