@@ -2,6 +2,7 @@
  * @author jb@noloading.com
  */
 
+
 $("document").ready(function() {"use strict";
 
 	var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
@@ -36,6 +37,8 @@ $("document").ready(function() {"use strict";
 		button_$.css('left', Number(pos_array[0]));
 		button_$.attr('data-index', index);
 		element_$.attr('data-index', index);
+		
+	
 
 		$('#application').append(button_$);
 
@@ -48,6 +51,26 @@ $("document").ready(function() {"use strict";
 	buttons_$.bind('mouseout', function() {
 		removeLast();
 	});
+
+
+buttons_$.bind ('click', function () {
+		var popup_$, this_$ = $(this), index;
+	if (!Modernizr.touch) {
+	
+		index = this_$.attr('data-index');
+
+		popup_$ = $(popups_$[index]);
+		
+		
+		window.open (popup_$.find ('a').attr ('href')); 
+	
+	
+		
+	}
+	
+});
+	
+	
 
 	buttons_$.bind('mouseover', function() {
 		//console.log ("mouse over");
@@ -69,7 +92,8 @@ $("document").ready(function() {"use strict";
 
 		this_$.addClass('selected');
 		lastPopup_$ = popup_$;
-		popup_$.addClass ('reveal'); 
+		popup_$.addClass ('reveal');
+	 
 		
 		
 $('#application').append (popup_$); 

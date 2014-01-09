@@ -78,8 +78,8 @@ img {
 	text-align: left;
 }
 .button {
-	width: 20px;
-	height: 20px;
+	width: 25px;
+	height: 25px;
 	background: url('../img/button0001.png');
 	background-size: 100%;
 	position: absolute;
@@ -87,6 +87,13 @@ img {
 	left: 100px;
 	cursor: pointer;
 }
+.touch .button {
+	width: 35px;
+	height: 35px;
+	
+	
+}
+
 .selected {
 	background: url('../img/button0002.png');
 	background-size: 100%;
