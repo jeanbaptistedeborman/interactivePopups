@@ -110,6 +110,15 @@ img {
 	color: #666;
 	box-shadow: 5px 5px 20px #666;
 }
+
+
+.touch popup {
+		width: 600px;
+	
+	
+	
+}
+
 .popup a {
 	position: absolute;
 	display: block;
