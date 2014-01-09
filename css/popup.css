@@ -1,118 +1,134 @@
 @keyframes
 reveal {
 from {
-    height: 0px;
+	height: 0px;
 }
 to {
-    height: 300px;
+	height: 300px;
 }
-}
+};
+
 @-webkit-keyframes
 fadeOut_anim {from {
-    opacity: 1;
+	opacity: 1;
 }
 to {
-    opacity: 0;
+	opacity: 0;
 }
-}
-
+};
 
 @-webkit-keyframes
-reveal { 
-from {
-    height: 0px;
+reveal {from {
+	height: 0px;
 }
 to {
-    height: 300px;
+	height: 300px;
 }
 }
+
 @keyframes
 fadeOut_anim {from {
-    opacity: 1;
+	opacity: 1;
 }
 to {
-    opacity: 0;
+	opacity: 0;
 }
 }
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600&subset=latin,latin-ext);
 
-
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600&subset=latin,latin-ext)
+.no-touch body {
+	padding:10px 0px 0px 0px; 
+	
+	
+}
 
 body {
-background-color: #FFFFFF;
-font-family: 'Open Sans', sans-serif;
-font-weight: 400;
-text-align:center; 
+	background-color: #FF0000;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	width:1000px; 
+	margin-left: auto;
+	margin-right: auto;
+	
 }
+
+
+#application {
+	margin-left: auto;
+	margin-right: auto;
+	position:relative; 
+ 
+}
+
+.no-touch  #application{
+	border: #FFFFFF 10px solid;
+	box-shadow: 5px 5px 20px #999;
+	width:auto;	
+	
+}
+
 img {
-    border: #FFFFFF 10px solid;
-    box-shadow: 5px 5px 20px #999;
-    width:1000px; 
-    height:auto; 
+	
+	width: 1000px;
+	height: 500px;
 }
 
 .popup h2 {
-    padding: 0;
-    margin: 0;
-    font-weight: 400;
-    text-align:left; 
+	padding: 0;
+	margin: 0;
+	font-weight: 400;
+	text-align: left;
 }
 .button {
-    width: 40px;
-    height: 40px;
-    background: url('../img/button0001.png');
-    background-size: 100%;
-    Xbackground-height: 40px;
-    position: absolute;
-    top:100px; 
-    left:100px; 
-    cursor: pointer;
-    shadow: 5px 5px 20px #333;
+	width: 40px;
+	height: 40px;
+	background: url('../img/button0001.png');
+	background-size: 100%;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	cursor: pointer;
 }
 .selected {
-    background: url('../img/button0002.png');
-    background-size: 100%;
+	background: url('../img/button0002.png');
+	background-size: 100%;
 }
 
 .popup {
-    width: 260px;
-    overflow: hidden;
-    position: absolute;
-    font-size: .8em;
-    top: 100px;
-    
-    background-position: center top;
-    background-repeat: repeat-y;
-
-    height: 300px;
-    animation: reveal .3s;
-    -webkit-animation: reveal .3s;
-    text-align: justify;
-    color: #666;
-    box-shadow: 5px 5px 20px #666;
+	width: 260px;
+	overflow: hidden;
+	position: absolute;
+	font-size: .7em;
+	top: 100px;
+	background-position: center top;
+	background-repeat: repeat-y;
+	height: 300px;
+	animation: reveal .3s;
+	-webkit-animation: reveal .3s;
+	text-align: justify;
+	color: #666;
+	box-shadow: 5px 5px 20px #666;
 }
 .popup a {
-    position: absolute;
-    display: block;
-    font-style: italic;
-    right: 30px;
-    bottom: 10px;
+	position: absolute;
+	display: block;
+	font-style: italic;
+	right: 30px;
+	bottom: 10px;
 }
 .popup a:link, .popup a:visited, .popup a:active {
-    color: #00cc99;
+	color: #00cc99;
 }
 .fadeOut {
-    animation: fadeOut_anim .5s;
+	animation: fadeOut_anim .5s;
 }
 
-.popup .content{
+.popup .content {
 
-
-    background: #ffffff; /* Old browsers */
-    padding: 30px 30px 30px 30px;
-    position: relative;
-    XXborder: #FFffff 2px solid;
-    box-shadow: 5px 5px 20px #666;
+	background: #ffffff; /* Old browsers */
+	padding: 30px 30px 30px 30px;
+	position: relative;
+	box-shadow: 5px 5px 20px #666;
 }
 

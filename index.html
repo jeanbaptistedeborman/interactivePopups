@@ -12,22 +12,29 @@
 		<meta name="author" content="W-B" />
 
 		<meta name="viewport" content="width=1000" />
+			<script src='script/dev/modernizr.js'></script>
 		<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
 		<script src='script/application-wb.js'></script>
+		
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/popup.css" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		
+		<script>
+					alert (window.Modernizr.touch); 
+		</script>
 	</head>
 
 	<body>
 
 		<header>
-			version:4;
 
 		</header>
+		<div id='application'>
 		<img src='img/boitsfort.png' />
+		</div>
 		<div class='popup' data-buttonPos='131,420'>
 
 			<div class='content'>
@@ -58,7 +65,7 @@
 
 			</div>
 
-			<div class='popup' data-buttonPos='440,660'>
+			<div class='popup' data-buttonPos='200,150'>
 
 				<div class='content'>
 					<h2>La maison communale</h2>
@@ -68,7 +75,7 @@
 				</div>
 
 			</div>
-			<div class='popup' data-buttonPos='630,400'>
+			<div class='popup' data-buttonPos='200,400'>
 
 				<div class='content'>
 					<h2>Le logis</h2>

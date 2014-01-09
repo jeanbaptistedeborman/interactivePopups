@@ -2,91 +2,88 @@
  * @author jb@noloading.com
  */
 
-$(document).ready(function() {"use strict";
+$("document").ready(function() {"use strict";
 
-    var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
-    //data-buttonPos
-    popups_$ = $('.popup').detach();
-    
-     function removeLast() {
-        if (lastPopup_$ !== undefined) {
-            var index, button_$;
+	var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
+	//data-buttonPos
+	popups_$ = $('.popup').detach();
 
-            index = lastPopup_$.attr('data-index');
+	function removeLast() {
+		if (lastPopup_$ !== undefined) {
+			var index, button_$;
 
-            button_$ = buttons_array[index];
-            button_$.removeClass('selected');
-            lastPopup_$.fadeOut(300, function() {
-                
-                $(this).detach();
-                //lastPopup_$.fadeIn(0);
+			index = lastPopup_$.attr('data-index');
 
-            });
+			button_$ = buttons_array[index];
+			button_$.removeClass('selected');
+			lastPopup_$.fadeOut(300, function() {
 
-        }
-    }
-    
-    popups_$.each(function(index, element) {
-        
+				$(this).detach();
+				//lastPopup_$.fadeIn(0);
 
-        var button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
-        //alert (pos_array[0]);
-        button_$.addClass('button');
-        button_$.css('top', Number(pos_array[1]));
-        button_$.css('left', Number(pos_array[0]));
-        button_$.attr('data-index', index);
-        element_$.attr('data-index', index);
+			});
 
-        $('body').append(button_$);
+		}
+	}
 
-        popups_array.push(element_$);
-        buttons_array.push(button_$);
 
-    });
+	popups_$.each(function(index, element) {
 
-    buttons_$ = $('.button');
-     buttons_$.bind('mouseout', function() { 
-        removeLast ();  
-     }); 
+		var button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
+		//alert (pos_array[0]);
+		button_$.addClass('button');
+		button_$.css('top', Number(pos_array[1]));
+		button_$.css('left', Number(pos_array[0]));
+		button_$.attr('data-index', index);
+		element_$.attr('data-index', index);
 
-    buttons_$.bind('mouseover', function() {
-        //console.log ("mouse over"); 
-   
-        var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
-        index = this_$.attr('data-index');
+		$('#application').append(button_$);
 
-        popup_$ = $(popups_$[index]);
-        popup_$.css ('opacity', 1);
-         popup_$.css ('display', 'block');  
-        if (lastPopup_$ !== undefined) {
-        console.log (lastPopup_$.attr('data-index') +" / " + popup_$.attr('data-index')); 
-       
-        if (lastPopup_$.attr('data-index') !==  popup_$.attr('data-index')) {
-            console.log ("CLOSE"); 
-           
-            removeLast(); 
-        }
-         } 
-        
+		popups_array.push(element_$);
+		buttons_array.push(button_$);
 
-        this_$.addClass('selected');
-        lastPopup_$ = popup_$;
+	});
 
-        popup_$.insertBefore(this_$);
+	buttons_$ = $('.button');
+	buttons_$.bind('mouseout', function() {
+		removeLast();
+	});
 
-        top_num = 20;
-        left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
-        height_num = 'auto';
-        //this_$.position().top - top_num + this_$.height() + 10;
+	buttons_$.bind('mouseover', function() {
+		//console.log ("mouse over");
 
-        popup_$.css({
-            top : top_num,
-            left : left_num,
-            height : height_num
-        });
-         lastPopup_$ = popup_$;  
+		var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
+		index = this_$.attr('data-index');
 
-    });
-   
+		popup_$ = $(popups_$[index]);
+		popup_$.css('opacity', 1);
+		popup_$.css('display', 'block');
+		if (lastPopup_$ !== undefined) {
+			//console.log (lastPopup_$.attr('data-index') +" / " + popup_$.attr('data-index'));
+
+			if (lastPopup_$.attr('data-index') !== popup_$.attr('data-index')) {
+
+				removeLast();
+			}
+		}
+
+		this_$.addClass('selected');
+		lastPopup_$ = popup_$;
+
+		popup_$.insertBefore(this_$);
+
+		top_num = 20;
+		left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
+		height_num = 'auto';
+		//this_$.position().top - top_num + this_$.height() + 10;
+
+		popup_$.css({
+			top : top_num,
+			left : left_num,
+			height : height_num
+		});
+		lastPopup_$ = popup_$;
+
+	});
 
 });
