@@ -18,11 +18,11 @@ $("document").ready(function() {"use strict";
 
 			button_$ = buttons_array[index];
 			button_$.removeClass('selected');
-			//lastPopup_$.fadeOut(300, function() {
+			lastPopup_$.fadeOut(300, function() {
 
 				$(this).detach();
 
-			//});
+			});
 
 		}
 	}
