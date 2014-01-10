@@ -32,6 +32,18 @@ to {
 	opacity:1;  
 }
 }
+@keyframes
+zoomIn {
+	
+	from {
+	width: 1px;
+	opacity:0;  
+}
+to {
+	width: 1000px;
+	opacity:1;  
+}
+}
 
 
 
@@ -78,6 +90,7 @@ body {
 	position:relative; 
 	text-align:center;
 	-webkit-animation: zoomIn 1s;
+	animation: zoomIn 1s;
 	height:500px;  
 	overflow:hidden; 
 	  
@@ -169,8 +182,6 @@ h1 {
 	line-height:1.3em; 
 	top: 0px;
 	margin-top:10px; 
-	background-position: center top;
-	background-repeat: repeat-y;
 	height: 300px;
 
 	text-align: justify;
@@ -186,7 +197,7 @@ h1 {
 	position:absolute; 
 		width: 600px;
 		
-		margin: 0px 200px 0px 200px; 
+		margin: 30px 200px 0px 200px; 
 	
 	
 	
@@ -203,6 +214,7 @@ h1 {
 }
 
 .touch .popup a {
+	margin-top:10px; 
 	text-transform:uppercase; 
 	background:#00cc99; 
 	
