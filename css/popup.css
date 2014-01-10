@@ -36,6 +36,13 @@ to {
 	width: 1000px;
 	opacity: 1;
 }
+
+#languageMenu {
+    display:none; 
+    
+    
+}
+
 }
 .lg-nl .nl {
 	   
@@ -177,7 +184,7 @@ h1 {
 }
 
 .popup a {
-	position: absolute;
+	position: absolute;x
 	display: block;
 	right: 20px;
 	bottom: 10px;
@@ -185,7 +192,7 @@ h1 {
 	text-decoration: none;
 }
 
-.no-touch .popup a {
+.touch .popup a {
 	margin-top: 200px;
 	text-transform: uppercase;
 	background: #00cc99;
@@ -193,8 +200,8 @@ h1 {
 .no-touch a {
 	font-style: italic;
 }
-.no-touch .popup a:link, .no-touch .popup  a:visited {
-	color: #666 :
+.no-touch a, .no-touch .popup a:link, .no-touch .popup  a:visited {
+	color: #666; 
 
 }
 

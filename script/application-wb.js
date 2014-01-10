@@ -3,7 +3,7 @@
  */
 
 $("document").ready(function() {"use strict";
-	$('html').addClass ('lg-nl'); 
+	$('html').addClass ('lg-fr'); 
 
 	var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
 	//data-buttonPos
@@ -18,11 +18,11 @@ $("document").ready(function() {"use strict";
 
 			button_$ = buttons_array[index];
 			button_$.removeClass('selected');
-			lastPopup_$.fadeOut(300, function() {
+			//lastPopup_$.fadeOut(300, function() {
 
 				//$(this).detach();
 
-			});
+			//});
 
 		}
 	}
