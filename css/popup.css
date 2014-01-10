@@ -123,7 +123,7 @@ header {
 	
 }
 h1 {
-	Xfont-family: 'Great Vibes', cursive;
+	font-family: serif;
 	font-size:40px;
 	margin:0px;
 	opacity:.9; 
