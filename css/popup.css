@@ -123,7 +123,7 @@ header {
 	
 }
 h1 {
-	font-family: 'Great Vibes', cursive;
+	Xfont-family: 'Great Vibes', cursive;
 	font-size:40px;
 	margin:0px;
 	opacity:.9; 
@@ -149,7 +149,7 @@ h1 {
 	margin: 0;
 	font-weight: 400;
 	text-align: left;
-	text-shadow:0px 0px #000;
+	Xtext-shadow:0px 0px #000;
 	line-height:36px; 
 }
 .button {
