@@ -18,7 +18,20 @@ reveal {
 to {
 	top: 0px; 
 }
-};
+}
+
+@-webkit-keyframes
+zoomIn {
+	
+	from {
+	width: 1px;
+	opacity:0;  
+}
+to {
+	width: 1000px;
+	opacity:1;  
+}
+}
 
 
 
@@ -29,14 +42,26 @@ to {
 
 
 body {
+	position:relative; 
 	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	width:1000px; 
 	margin-left: auto;
 	margin-right: auto;
+	text-align:center; 
 	
 }
+.no-touch body {
+	margin:100px auto 0px auto; 
+	
+	
+}
+.touch body {
+	background-color:#99ccff; 
+	
+}
+
 
 .reveal {
 	animation: reveal 0.3s;
@@ -44,11 +69,6 @@ body {
 }
 
 
-.no-touch body {
-	padding:20px 0px 0px 0px; 
-	
-	
-}
 
 
 
@@ -56,26 +76,68 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	position:relative; 
+	text-align:center;
+	-webkit-animation: zoomIn 1s;
+	height:500px;  
+	overflow:hidden; 
+	  
  
 }
 
 
 
 img {
+	position:absolute; 
 	
 	width: 1000px;
 	height: 500px;
+	top:0px; 
+	left:0px;
+	border-radius: 3px; 
+ 
 }
-.no-touch img {
-	box-shadow: 5px 5px 20px #999;
+.no-touch #application {
+	box-shadow: 5px 5px 20px #ddd;
 	
 }
-
+header {
+	text-align:center; 
+	padding-top:25px; 
+	position:relative;
+	color:#FFF;
+	width:1000px;   
+	
+	
+}
+h1 {
+	font-family: 'Great Vibes', cursive;
+	font-size:40px;
+	margin:0px;
+	opacity:.9; 
+	Xwidth:1000px;    
+	
+	
+}
+#subtitle {
+	text-transform:uppercase;
+	Xfont-size:smaller;
+	letter-spacing:0.3em;
+	font-size:smaller;  
+	 
+	
+	
+}
 .popup h2 {
-	padding: 0;
+	font-family: 'Great Vibes', cursive;
+	Xtext-shadow: #fff 0px 1px 1px; 
+	-webkit-font-smoothing: antialiased;
+	font-size:30px; 
+	padding: 0 0 5px 0;
 	margin: 0;
 	font-weight: 400;
 	text-align: left;
+	text-shadow:0px 0px #000;
+	line-height:36px; 
 }
 .button {
 	width: 25px;
@@ -105,20 +167,21 @@ img {
 	position: absolute;
 	font-size: 11px;
 	line-height:1.3em; 
-	Xtop: 100px;
+	top: 0px;
+	margin-top:10px; 
 	background-position: center top;
 	background-repeat: repeat-y;
 	height: 300px;
 
 	text-align: justify;
-	color: #666;
+	color: #333;
 	box-shadow: 5px 5px 20px #667;
-	border-radius: 5px; 
+	border-radius: 3px; 
 }
 
 
 .touch .popup {
-	font-size: 14px;
+	font-size: 16px;
 
 	position:absolute; 
 		width: 600px;
@@ -131,20 +194,46 @@ img {
 
 .popup a {
 	position: absolute;
-	display: block;
-	font-style: italic;
-	right: 30px;
+	display: block; 
+	
+	right: 20px;
 	bottom: 10px;
+	padding: 2px;
+	text-decoration:none;  
 }
-.popup a:link, .popup a:visited, .popup a:active {
-	color: #00cc99;
+
+.touch .popup a {
+	text-transform:uppercase; 
+	background:#00cc99; 
+	
+	
+}
+.no-touch a {
+	font-style:italic; 	
+	
+	
+}
+.no-touch .popup a:link, .no-touch .popup  a:visited {
+	color:#666:  	
+	
+	
+}
+
+.touch .click-text {
+	display:none; 
+	
+	
+}
+
+.touch .popup a:link,.touch  .popup a:visited,.touch  .popup a:active {
+	color: #FFF;
 }
 
 
 .popup .content {
 
 	background: #ffffff; /* Old browsers */
-	padding: 30px 30px 30px 30px;
+	padding: 20px 20px 30px 20px;
 	position: relative;
 	box-shadow: 5px 5px 20px #666;
 }

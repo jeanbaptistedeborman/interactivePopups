@@ -2,12 +2,12 @@
  * @author jb@noloading.com
  */
 
-
 $("document").ready(function() {"use strict";
 
 	var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
 	//data-buttonPos
 	popups_$ = $('.popup').detach();
+	$('#application').append ($('header')); 
 
 	function removeLast() {
 		if (lastPopup_$ !== undefined) {
@@ -20,7 +20,6 @@ $("document").ready(function() {"use strict";
 			lastPopup_$.fadeOut(300, function() {
 
 				$(this).detach();
-		
 
 			});
 
@@ -37,8 +36,6 @@ $("document").ready(function() {"use strict";
 		button_$.css('left', Number(pos_array[0]));
 		button_$.attr('data-index', index);
 		element_$.attr('data-index', index);
-		
-	
 
 		$('#application').append(button_$);
 
@@ -52,25 +49,22 @@ $("document").ready(function() {"use strict";
 		removeLast();
 	});
 
+	buttons_$.bind('click', function() {
+		var popup_$, this_$ = $(this), index, a_$;
+		if (!Modernizr.touch) {
 
-buttons_$.bind ('click', function () {
-		var popup_$, this_$ = $(this), index;
-	if (!Modernizr.touch) {
-	
-		index = this_$.attr('data-index');
+			index = this_$.attr('data-index');
 
-		popup_$ = $(popups_$[index]);
-		
-		
-		window.open (popup_$.find ('a').attr ('href')); 
-	
-	
-		
-	}
-	
-});
-	
-	
+			popup_$ = $(popups_$[index]);
+			a_$ = popup_$.find('a');
+			if (a_$.length > 0) {
+
+				window.open(a_$.attr('href'));
+			}
+
+		}
+
+	});
 
 	buttons_$.bind('mouseover', function() {
 		//console.log ("mouse over");
@@ -92,14 +86,12 @@ buttons_$.bind ('click', function () {
 
 		this_$.addClass('selected');
 		lastPopup_$ = popup_$;
-		popup_$.addClass ('reveal');
-	 
-		
-		
-$('#application').append (popup_$); 
+		popup_$.addClass('reveal');
+
+		$('#application').append(popup_$);
 		//popup_$.insertBefore(this_$);
 
-		top_num = 20;
+	
 		if (!Modernizr.touch) {
 			left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
 		};
@@ -108,7 +100,7 @@ $('#application').append (popup_$);
 		//this_$.position().top - top_num + this_$.height() + 10;
 
 		popup_$.css({
-			top : top_num,
+		
 			left : left_num,
 			height : height_num
 		});
