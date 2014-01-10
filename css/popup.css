@@ -1,157 +1,138 @@
 @keyframes
 reveal {
 from {
-	top: -200px; 
+	top: -200px;
 }
 to {
-	top: 0px; 
-}
-}
-
-
-@-webkit-keyframes
-reveal {
-	
-	from {
-	top: -200px; 
-}
-to {
-	top: 0px; 
+	top: 0px;
 }
 }
 
 @-webkit-keyframes
-zoomIn {
-	
-	from {
+reveal {from {
+	top: -200px;
+}
+to {
+	top: 0px;
+}
+}
+
+@-webkit-keyframes
+zoomIn {from {
 	width: 1px;
-	opacity:0;  
+	opacity: 0;
 }
 to {
 	width: 1000px;
-	opacity:1;  
+	opacity: 1;
 }
 }
 @keyframes
-zoomIn {
-	
-	from {
+zoomIn {from {
 	width: 1px;
-	opacity:0;  
+	opacity: 0;
 }
 to {
 	width: 1000px;
-	opacity:1;  
+	opacity: 1;
 }
 }
-
-
-
-
-
-
-
-
+.lg-nl .nl {
+	   
+	
+}
+.lg-nl .fr {
+	display:none;   
+	
+}
+.lg-fr .fr {
+ 
+	
+}
+.lg-fr .nl {
+	display:none;  
+	
+}
 
 body {
-	position:relative; 
+	position: relative;
 	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	width:1000px; 
+	width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
-	text-align:center; 
-	
+	text-align: center;
 }
 .no-touch body {
-	margin:100px auto 0px auto; 
-	
-	
+	margin: 100px auto 0px auto;
 }
 .touch body {
-	background-color:#99ccff; 
-	
+	background-color: #99ccff;
 }
-
 
 .reveal {
 	animation: reveal 0.3s;
 	-webkit-animation: reveal 0.3s;
 }
 
-
-
-
-
 #application {
 	margin-left: auto;
 	margin-right: auto;
-	position:relative; 
-	text-align:center;
+	position: relative;
+	text-align: center;
 	-webkit-animation: zoomIn 1s;
 	animation: zoomIn 1s;
-	height:500px;  
-	overflow:hidden; 
-	  
- 
+	height: 500px;
+	overflow: hidden;
 }
 
-
-
 img {
-	position:absolute; 
-	
+	position: absolute;
 	width: 1000px;
 	height: 500px;
-	top:0px; 
-	left:0px;
-	border-radius: 3px; 
- 
+	top: 0px;
+	left: 0px;
+	border-radius: 3px;
 }
 .no-touch #application {
 	box-shadow: 5px 5px 20px #ddd;
-	
 }
 header {
-	text-align:center; 
-	padding-top:25px; 
-	position:relative;
-	color:#FFF;
-	width:1000px;   
-	
-	
+	text-align: center;
+	padding-top: 25px;
+	position: relative;
+	color: #FFF;
+	width: 1000px;
 }
 h1 {
 	font-family: 'Great Vibes', cursive;
-	font-size:48px;
-	margin:0px;
-	opacity:.9;
-	font-weight:normal;  
-	Xwidth:1000px;    
-	
-	
+	font-size: 48px;
+	margin: 0px;
+	opacity: .9;
+	font-weight: normal;
+	Xwidth: 1000px;
+	text-shadow: #fff 0px 0px 0px;
+	-webkit-font-smoothing: antialiased;
 }
 #subtitle {
-	text-transform:uppercase;
-	Xfont-size:smaller;
-	letter-spacing:0.3em;
-	font-size:smaller;  
-	 
-	
-	
+	text-transform: uppercase;
+	Xfont-size: smaller;
+	letter-spacing: 0.3em;
+	font-size: smaller;
 }
 .popup h2 {
 	font-family: 'Great Vibes', cursive;
-	Xtext-shadow: #fff 0px 1px 1px; 
-	-Xwebkit-font-smoothing: antialiased;
-	font-size:30px; 
+	text-shadow: #000 0px .8px .8px;
+	-webkit-font-smoothing: antialiased;
+	font-size: 30px;
 	padding: 0 0 5px 0;
 	margin: 0;
 	font-weight: 400;
 	text-align: left;
-	Xtext-shadow:0px 0px #000;
-	line-height:36px; 
+	Xtext-shadow: 0px 0px #000;
+	line-height: 36px;
+	font-weight: normal;
 }
 .button {
 	width: 25px;
@@ -166,8 +147,6 @@ h1 {
 .touch .button {
 	width: 35px;
 	height: 35px;
-	
-	
 }
 
 .selected {
@@ -180,67 +159,52 @@ h1 {
 	overflow: hidden;
 	position: absolute;
 	font-size: 11px;
-	line-height:1.3em; 
+	line-height: 1.3em;
 	top: 0px;
-	margin-top:10px; 
+	margin-top: 10px;
 	height: 300px;
-
 	text-align: justify;
 	color: #333;
 	box-shadow: 5px 5px 20px #667;
-	border-radius: 3px; 
+	border-radius: 3px;
 }
-
 
 .touch .popup {
 	font-size: 16px;
-
-	position:absolute; 
-		width: 600px;
-		
-		margin: 30px 200px 0px 200px; 
-
-	
+	position: absolute;
+	width: 600px;
+	margin: 30px 200px 0px 200px;
 }
 
 .popup a {
 	position: absolute;
-	display: block; 
-	
+	display: block;
 	right: 20px;
 	bottom: 10px;
 	padding: 2px;
-	text-decoration:none;  
+	text-decoration: none;
 }
 
-.touch .popup a {
-	margin-top:20px; 
-	text-transform:uppercase; 
-	background:#00cc99; 
-	
-	
+.no-touch .popup a {
+	margin-top: 200px;
+	text-transform: uppercase;
+	background: #00cc99;
 }
 .no-touch a {
-	font-style:italic; 	
-	
-	
+	font-style: italic;
 }
 .no-touch .popup a:link, .no-touch .popup  a:visited {
-	color:#666:  	
-	
-	
+	color: #666 :
+
 }
 
 .touch .click-text {
-	display:none; 
-	
-	
+	display: none;
 }
 
-.touch .popup a:link,.touch  .popup a:visited,.touch  .popup a:active {
+.touch .popup a:link, .touch  .popup a:visited, .touch  .popup a:active {
 	color: #FFF;
 }
-
 
 .popup .content {
 

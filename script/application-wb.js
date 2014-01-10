@@ -3,6 +3,7 @@
  */
 
 $("document").ready(function() {"use strict";
+	$('html').addClass ('lg-nl'); 
 
 	var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
 	//data-buttonPos
@@ -19,7 +20,7 @@ $("document").ready(function() {"use strict";
 			button_$.removeClass('selected');
 			lastPopup_$.fadeOut(300, function() {
 
-				$(this).detach();
+				//$(this).detach();
 
 			});
 
