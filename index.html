@@ -1,84 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
+	<head>
+		<meta charset="utf-8" />
 
-        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-        Remove this if you use the .htaccess -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title>index</title>
-        <meta name="description" content="" />
-        <meta name="author" content="JB" />
+		<title>index</title>
+		<meta name="description" content="" />
+		<meta name="author" content="W-B" />
 
-        <meta name="viewport" content="width=1000" />
-        <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
-        <script src='script/application-wb.js'></script>
-        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="stylesheet" href="css/normalize.css" />
-        <link rel="stylesheet" href="css/popup.css" />
-        <link rel="shortcut icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    </head>
+		<meta name="viewport" content="width=1000" />
+		<script src='script/dev/modernizr.js'></script>
+		<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+		<script src='script/dev/utils'></script>
 
-    <body>
-        <div>
-            <header>
+		<script src='script/application-wb.js'></script>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
 
-            </header>
-            <img src='img/boitsfort.png' />
-            <div class='popup' data-buttonPos='131,420'>
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="stylesheet" href="css/normalize.css" />
+		<link rel="stylesheet" href="css/popup.css" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-                <div class='content'>
-                    <h2>La gare de Boitsfort</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                    semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                    <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                </div>
+		<script>
+			if (UserAgent.android()) {
+				viewport = document.querySelector("meta[name=viewport]");
+				viewport.setAttribute('content', 'width=1200');
 
-            </div>
-            <div class='popup' data-buttonPos='230,450'>
+			}
+		</script>
+	</head>
 
-                <div class='content'>
-                    <h2>PLace Keym</h2>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                    semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                    <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                </div>
+	<body>
 
-                <div class='popup' data-buttonPos='380,400'>
+		<header>
+			<div id='languageMenu'><span>FR</span><span>NL</span></div>
+			<h1>Bonne année 2014</h1>
+			<span id=subtitle>~ Un apperçu de nos grands chantiers de 2013 ~</span>
 
-                    <div class='content'>
-                        <h2>Le stade des Trois Tilleuls</h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                        semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                        <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                    </div>
+		</header>
+		<div id='application'>
+			<img src='img/boitsfort.png' />
+		</div>
+		<div class='popup' data-buttonPos='131,420'>
 
-                </div>
-                
-                  <div class='popup' data-buttonPos='440,660'>
+			<div class='content fr'>
+				<h2>La place Keym</h2>
+				La réflexion sur le réaménagement de la place Keym a démarré. Un architecte sera désigné l’année prochaine et fera des propositions qui seront présentées et discutées avec les habitants et les commerçants. A suivre…
 
-                    <div class='content'>
-                        <h2>La maison communale</h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                        semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                        <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                    </div>
+<p>Du côté de l’Espace Delvaux : la salle de cinéma passe au tout numérique et les horaires de la bibliothèque sont élargis !
+				<a href='http://www.google.com' target = '_blank'><span class='click-text'>Cliquez pour </span>en savoir plus</a>
+			</div>
+			<div class='content nl'>
+				<h2>NL La place Keym</h2>
+				La réflexion sur le réaménagement de la place Keym a démarré. Un architecte sera désigné l’année prochaine et fera des propositions qui seront présentées et discutées avec les habitants et les commerçants. A suivre…
 
-                </div>
-                  <div class='popup' data-buttonPos='630,400'>
+<p>Du côté de l’Espace Delvaux : la salle de cinéma passe au tout numérique et les horaires de la bibliothèque sont élargis !
+				<a href='http://www.google.com' target = '_blank'><span class='click-text'>Cliquez pour </span>en savoir plus</a>
+			</div>
 
-                    <div class='content'>
-                        <h2>Le logis</h2>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
-                        semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
-                        <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-                    </div>
+		</div>
+		<div class='popup' data-buttonPos='230,450'>
 
-                </div>
+			<div class='content'>
+				<h2>PLace Keym</h2>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+				semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+				<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+			</div>
 
-            </div>
+			<div class='popup' data-buttonPos='380,400'>
 
-    </body>
+				<div class='content'>
+					<h2>Le stade des Trois Tilleuls</h2>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+					semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+					<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+				</div>
+
+			</div>
+
+			<div class='popup' data-buttonPos='200,300'>
+
+				<div class='content'>
+					<h2>La maison communale</h2>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+					semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+					<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+				</div>
+
+			</div>
+			<div class='popup' data-buttonPos='200,400'>
+
+				<div class='content'>
+					<h2>Le logis</h2>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies, quam a sodales.
+					semper, neque ipsum rhoncus turpis, id feugiat nisi magna vitae urna. Pellentesque vitae nisl leo. In nec pharetra elit. Suspendisse quis iaculis arcu. Quisque facilisis tempus placerat. Nunc id blandit dolor, vel sagittis felis. Nulla ut est dolor. Ut non ligula non nulla tristique faucibus. Nunc laoreet ipsum lorem, eu elementum velit varius in.
+					<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+				</div>
+
+			</div>
+
+		</div>
+
+	</body>
 </html>
