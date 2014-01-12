@@ -19,7 +19,7 @@ to {
 
 @-webkit-keyframes
 zoomIn {from {
-	Xwidth: 1px;
+	xwidth: 1px;
 	opacity: 0;
 }
 to {
@@ -73,7 +73,7 @@ to {
 
 body {
 	position: relative;
-	background-color: #fff;
+	background-color: #ddd;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	width: 1200px;
@@ -104,17 +104,24 @@ body {
 	height: 600px;
 	overflow: hidden;
 }
+#logo {
+	position:absolute;
+	width:70px; 
+	height:auto; 
+	left:10px; 
+	bottom:10px;  
+}
 
-img {
+#illustration {
 	position: absolute;
 	width: 100%;
 	height: 100%;
 	top: 0px;
 	left: 0px;
-	border-radius: 10px;
+	Xborder-radius: 10px;
 }
 .no-touch #application {
-	box-shadow: 5px 5px 20px #ddd;
+	box-shadow: 0px 5px 30px #aaa;
 }
 header {
 	text-align: center;
@@ -125,8 +132,9 @@ header {
 }
 h1 {
 	font-family: 'Great Vibes', cursive;
+	
 	font-size: 60px;
-	margin: 0px;
+	margin: 40px 0 0 0; 
 	opacity: .9;
 	font-weight: normal;
 	text-shadow: #fff 0px 0px 0px;
@@ -189,20 +197,34 @@ h1 {
 	position: absolute;
 	width: 800px;
 	margin: 30px 300px 0px 200px;
-	padding-bottom:40px; 
-}
 
+}
+.popup .link {
+	
+		Xdisplay: block;
+		text-align:right; 
+		margin-top:20px; 
+	
+}
 .popup a {
-	position: absolute;
-	display: block;
-	right: 20px;
-	bottom: 10px;
+	
+
+	position:relative; 
+	right:0px;
+ 
+	
+
 	padding: 2px;
 	text-decoration: none;
+	margin-top:10px;  
+	text-align:right; 
 }
 
-.touch .popup a {
-	margin-top: 200px;
+.no-touch .popup a {
+	
+	
+	color:#ff0; 
+
 	text-transform: uppercase;
 	background: #00cc99;
 }
@@ -212,7 +234,10 @@ h1 {
 .no-touch a, .no-touch .popup a:link, .no-touch .popup  a:visited {
 	color: #666;
 }
-
+.touch h2 {
+	
+	
+}
 .touch .click-text {
 	display: none;
 }
@@ -224,7 +249,7 @@ h1 {
 .popup .content {
 
 	background: #ffffff; /* Old browsers */
-	padding: 20px 20px 30px 20px;
+	padding: 20px 20px 20px 20px;
 	position: relative;
 	box-shadow: 5px 5px 20px #666;
 	height:100%; 
