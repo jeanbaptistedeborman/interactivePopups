@@ -19,7 +19,7 @@ to {
 
 @-webkit-keyframes
 zoomIn {from {
-	Xwidth: 1px;
+	xwidth: 1px;
 	opacity: 0;
 }
 to {
@@ -189,16 +189,17 @@ h1 {
 	position: absolute;
 	width: 800px;
 	margin: 30px 300px 0px 200px;
-	padding-bottom:40px; 
+
 }
 
 .popup a {
-	position: absolute;
+	
 	display: block;
-	right: 20px;
-	bottom: 10px;
+	
+
 	padding: 2px;
 	text-decoration: none;
+	text-align:right; 
 }
 
 .touch .popup a {
@@ -212,7 +213,10 @@ h1 {
 .no-touch a, .no-touch .popup a:link, .no-touch .popup  a:visited {
 	color: #666;
 }
-
+.touch h2 {
+	
+	
+}
 .touch .click-text {
 	display: none;
 }
@@ -224,7 +228,7 @@ h1 {
 .popup .content {
 
 	background: #ffffff; /* Old browsers */
-	padding: 20px 20px 30px 20px;
+	padding: 20px 20px 20px 20px;
 	position: relative;
 	box-shadow: 5px 5px 20px #666;
 	height:100%; 
