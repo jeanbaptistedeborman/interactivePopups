@@ -19,21 +19,21 @@ to {
 
 @-webkit-keyframes
 zoomIn {from {
-	width: 1px;
+	Xwidth: 1px;
 	opacity: 0;
 }
 to {
-	width: 1200px;
+	Xwidth: 1200px;
 	opacity: 1;
 }
 }
 @keyframes
 zoomIn {from {
-	width: 1px;
+	Xwidth: 1px;
 	opacity: 0;
 }
 to {
-	width: 1200px;
+	Xwidth: 1200px;
 	opacity: 1;
 }
 }
@@ -49,7 +49,7 @@ to {
 	height:20px; 
 	width:20px;
 	line-height:20px;  
-	font-size:10px; 
+	font-size:12px; 
 	margin-left:10px; 
 	border: 1px solid #fff;
 	opacity:.7;
@@ -125,7 +125,7 @@ header {
 }
 h1 {
 	font-family: 'Great Vibes', cursive;
-	font-size: 40px;
+	font-size: 60px;
 	margin: 0px;
 	opacity: .9;
 	font-weight: normal;
@@ -185,10 +185,11 @@ h1 {
 }
 
 .touch .popup {
-	font-size: 16px;
+	font-size: 22px;
 	position: absolute;
 	width: 800px;
-	margin: 30px 200px 0px 200px;
+	margin: 30px 300px 0px 200px;
+	padding-bottom:40px; 
 }
 
 .popup a {
@@ -226,5 +227,6 @@ h1 {
 	padding: 20px 20px 30px 20px;
 	position: relative;
 	box-shadow: 5px 5px 20px #666;
+	height:100%; 
 }
 
