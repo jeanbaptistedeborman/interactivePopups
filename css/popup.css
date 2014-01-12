@@ -23,7 +23,7 @@ zoomIn {from {
 	opacity: 0;
 }
 to {
-	width: 1000px;
+	width: 1200px;
 	opacity: 1;
 }
 }
@@ -33,32 +33,42 @@ zoomIn {from {
 	opacity: 0;
 }
 to {
-	width: 1000px;
+	width: 1200px;
 	opacity: 1;
+}
 }
 
 #languageMenu {
-    display:none; 
-    
-    
+	position:absolute;
+	top:10px; 
+	right:10px;  
 }
 
+#languageMenu span {
+	display:inline-block; 
+	height:20px; 
+	width:20px;
+	line-height:20px;  
+	font-size:10px; 
+	margin-left:10px; 
+	border: 1px solid #fff;
+	opacity:.7;
+	cursor:pointer;
+	border-radius: 2px;   
 }
-.lg-nl .nl {
-	   
-	
+
+#languageMenu .selected {
+	background-color:#FFF;
+	color:#000; 
+	cursor:auto; 
 }
+
 .lg-nl .fr {
-	display:none;   
-	
+	display: none;
 }
-.lg-fr .fr {
- 
-	
-}
+
 .lg-fr .nl {
-	display:none;  
-	
+	display: none;
 }
 
 body {
@@ -66,13 +76,13 @@ body {
 	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
-	width: 1000px;
+	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
 }
 .no-touch body {
-	margin: 100px auto 0px auto;
+	margin: 50px auto 0px auto;
 }
 .touch body {
 	background-color: #99ccff;
@@ -88,19 +98,20 @@ body {
 	margin-right: auto;
 	position: relative;
 	text-align: center;
-	-webkit-animation: zoomIn 1s;
-	animation: zoomIn 1s;
-	height: 500px;
+	-webkit-animation: zoomIn .3s;
+	animation: zoomIn .3s;
+ 
+	height: 600px;
 	overflow: hidden;
 }
 
 img {
 	position: absolute;
-	width: 1000px;
-	height: 500px;
+	width: 100%;
+	height: 100%;
 	top: 0px;
 	left: 0px;
-	border-radius: 3px;
+	border-radius: 10px;
 }
 .no-touch #application {
 	box-shadow: 5px 5px 20px #ddd;
@@ -110,21 +121,19 @@ header {
 	padding-top: 25px;
 	position: relative;
 	color: #FFF;
-	width: 1000px;
+	width: 100%;
 }
 h1 {
 	font-family: 'Great Vibes', cursive;
-	font-size: 48px;
+	font-size: 40px;
 	margin: 0px;
 	opacity: .9;
 	font-weight: normal;
-	Xwidth: 1000px;
 	text-shadow: #fff 0px 0px 0px;
 	-webkit-font-smoothing: antialiased;
 }
 #subtitle {
 	text-transform: uppercase;
-	Xfont-size: smaller;
 	letter-spacing: 0.3em;
 	font-size: smaller;
 }
@@ -137,7 +146,6 @@ h1 {
 	margin: 0;
 	font-weight: 400;
 	text-align: left;
-	Xtext-shadow: 0px 0px #000;
 	line-height: 36px;
 	font-weight: normal;
 }
@@ -156,7 +164,7 @@ h1 {
 	height: 35px;
 }
 
-.selected {
+.button.selected {
 	background: url('../img/button0002.png');
 	background-size: 100%;
 }
@@ -179,12 +187,12 @@ h1 {
 .touch .popup {
 	font-size: 16px;
 	position: absolute;
-	width: 600px;
+	width: 800px;
 	margin: 30px 200px 0px 200px;
 }
 
 .popup a {
-	position: absolute;x
+	position: absolute;
 	display: block;
 	right: 20px;
 	bottom: 10px;
@@ -201,8 +209,7 @@ h1 {
 	font-style: italic;
 }
 .no-touch a, .no-touch .popup a:link, .no-touch .popup  a:visited {
-	color: #666; 
-
+	color: #666;
 }
 
 .touch .click-text {

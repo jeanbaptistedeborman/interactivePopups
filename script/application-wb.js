@@ -1,14 +1,44 @@
 /**
  * @author jb@noloading.com
  */
+/*jslint vars:true, white:true, nomen:true, plusplus:true */
+/*global $,SimpleMenu,Modernizr*/
 
 $("document").ready(function() {"use strict";
-	$('html').addClass ('lg-fr'); 
+	$('html').addClass('lg-fr');
 
-	var POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
+	var userLang_str = navigator.language || navigator.userLanguage, POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
+
 	//data-buttonPos
+	var languageMenu_$ = $('#languageMenu');
+	var languageMenu = new SimpleMenu(languageMenu_$);
+	var selectedLanguage_str;
+
+	if (userLang_str.toString().toLowerCase().indexOf('nl') !== -1) {
+		selectedLanguage_str = 'nl';
+
+	} else {
+		selectedLanguage_str = 'fr';
+
+	}
+	
+	var selection_str = "data-id = '"+ selectedLanguage_str + "'"; 
+	languageMenu_$.find("span["+selection_str+"]").trigger('click');
+	
+
+	
+	languageMenu.onSelect = function() {
+		var lg_str = this.selected_$.attr('data-id');
+		$('html').toggleClass("lg-fr", false);
+		$('html').toggleClass("lg-nl", false);
+		$('html').toggleClass("lg-" + lg_str, true);
+
+		//alert (lg_str);
+
+	};
+
 	popups_$ = $('.popup').detach();
-	$('#application').append ($('header')); 
+	$('#application').append($('header'));
 
 	function removeLast() {
 		if (lastPopup_$ !== undefined) {
@@ -92,16 +122,15 @@ $("document").ready(function() {"use strict";
 		$('#application').append(popup_$);
 		//popup_$.insertBefore(this_$);
 
-	
 		if (!Modernizr.touch) {
 			left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
-		};
+		}
 
 		height_num = 'auto';
 		//this_$.position().top - top_num + this_$.height() + 10;
 
 		popup_$.css({
-		
+
 			left : left_num,
 			height : height_num
 		});
