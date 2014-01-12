@@ -29,6 +29,18 @@
 	</head>
 
 	<body>
+		<div id="fb-root"></div>
+		<script>
+			( function(d, s, id) {
+					var js, fjs = d.getElementsByTagName(s)[0];
+					if (d.getElementById(id))
+						return;
+					js = d.createElement(s);
+					js.id = id;
+					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=669311946433468";
+					fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+		</script>
 
 		<header>
 
@@ -46,7 +58,9 @@
 		<div id='application'>
 			<img id='illustration' src='img/boitsfort.png' />
 			<a href='http://www.watermael-boitsfort.be/' target='_blank'><img id = 'logo' src='img/logo.png' /></a>
+			<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 		</div>
+
 		<div class='popup' data-buttonPos='131,420'>
 
 			<div class='content fr'>
@@ -54,16 +68,22 @@
 				La réflexion sur le réaménagement de la place Keym a démarré. Un architecte sera désigné l’année prochaine et fera des propositions qui seront présentées et discutées avec les habitants et les commerçants. A suivre…
 
 				<p>
-					Du côté de l’Espace Delvaux : la salle de cinéma passe au tout numérique et les horaires de la bibliothèque sont élargis ! <div class='link'><a href='http://www.google.com' target = '_blank'><span class='click-text'>Cliquez pour </span>en savoir plus</a></div>
+					Du côté de l’Espace Delvaux : la salle de cinéma passe au tout numérique et les horaires de la bibliothèque sont élargis !
+					<div class='link'>
+						<a href='http://www.google.com' target = '_blank'><span class='click-text'>Cliquez pour </span>en savoir plus</a>
+					</div>
 			</div>
-			</div>
-			<div class='content nl'>
-				<h2>NL La place Keym</h2>
-				La réflexion sur le réaménagement de la place Keym a démarré. Un architecte sera désigné l’année prochaine et fera des propositions qui seront présentées et discutées avec les habitants et les commerçants. A suivre…
+		</div>
+		<div class='content nl'>
+			<h2>NL La place Keym</h2>
+			La réflexion sur le réaménagement de la place Keym a démarré. Un architecte sera désigné l’année prochaine et fera des propositions qui seront présentées et discutées avec les habitants et les commerçants. A suivre…
 
-				<p>
-					Du côté de l’Espace Delvaux : la salle de cinéma passe au tout numérique et les horaires de la bibliothèque sont élargis !<div class='link'><a href='http://www.google.com' target = '_blank'><span class='click-text'>Cliquez pour </span>en savoir plus</a></div>
-			</div>
+			<p>
+				Du côté de l’Espace Delvaux : la salle de cinéma passe au tout numérique et les horaires de la bibliothèque sont élargis !
+				<div class='link'>
+					<a href='http://www.google.com' target = '_blank'><span class='click-text'>Cliquez pour </span>en savoir plus</a>
+				</div>
+		</div>
 
 		</div>
 		<div class='popup' data-buttonPos='230,450'>

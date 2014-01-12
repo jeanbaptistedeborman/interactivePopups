@@ -106,10 +106,19 @@ body {
 }
 #logo {
 	position:absolute;
-	width:70px; 
+	width:40px; 
 	height:auto; 
 	left:10px; 
 	bottom:10px;  
+}
+.fb-like {
+	position:absolute;
+ 
+ 
+	right:10px; 
+	bottom:10px;  
+	
+	
 }
 
 #illustration {
