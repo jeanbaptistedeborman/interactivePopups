@@ -48,11 +48,11 @@ $("document").ready(function() {"use strict";
 
 			button_$ = buttons_array[index];
 			button_$.removeClass('selected');
-			lastPopup_$.fadeOut(300, function() {
+			/*lastPopup_$.fadeOut(300, function() {
 
 				$(this).detach();
 
-			});
+			});*/
 
 		}
 	}
@@ -98,7 +98,6 @@ $("document").ready(function() {"use strict";
 	});
 
 	buttons_$.bind('mouseover', function() {
-		//console.log ("mouse over");
 
 		var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
 		index = this_$.attr('data-index');
@@ -120,7 +119,7 @@ $("document").ready(function() {"use strict";
 		popup_$.addClass('reveal');
 
 		$('#application').append(popup_$);
-		//popup_$.insertBefore(this_$);
+
 
 		if (!Modernizr.touch) {
 			left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
