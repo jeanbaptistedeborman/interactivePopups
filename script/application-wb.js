@@ -5,7 +5,7 @@
 /*global $,SimpleMenu,Modernizr*/
 
 $("document").ready(function() {"use strict";
-	$('html').addClass('lg-fr');
+	//$('html').addClass('lg-fr');
 
 	var userLang_str = navigator.language || navigator.userLanguage, POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
 
@@ -16,18 +16,22 @@ $("document").ready(function() {"use strict";
 
 	if (userLang_str.toString().toLowerCase().indexOf('nl') !== -1) {
 		selectedLanguage_str = 'nl';
+		
 
 	} else {
 		selectedLanguage_str = 'fr';
 
 	}
-	
+ 
 	var selection_str = "data-id = '"+ selectedLanguage_str + "'"; 
-	languageMenu_$.find("span["+selection_str+"]").trigger('click');
 	
+		
+	languageMenu_$.find("span["+selection_str+"]").trigger('click');
+	$('html').toggleClass("lg-" + selectedLanguage_str);
 
 	
 	languageMenu.onSelect = function() {
+		//alert ("onselect");
 		var lg_str = this.selected_$.attr('data-id');
 		$('html').toggleClass("lg-fr", false);
 		$('html').toggleClass("lg-nl", false);
@@ -123,6 +127,13 @@ $("document").ready(function() {"use strict";
 
 		if (!Modernizr.touch) {
 			left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
+			if (left_num < 10) {
+				left_num = 10; 
+			}
+			var max_pos = $('#application').width () - popup_$.width() -10; 
+			if (left_num > max_pos) {
+				left_num = max_pos; 
+			}
 		}
 
 		height_num = 'auto';
