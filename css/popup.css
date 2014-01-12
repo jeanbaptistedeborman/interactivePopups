@@ -183,10 +183,7 @@ h1 {
 	left: 100px;
 	cursor: pointer;
 }
-.touch .button {
-	width: 35px;
-	height: 35px;
-}
+
 
 .button.selected {
 	background: url('../img/button0002.png');
