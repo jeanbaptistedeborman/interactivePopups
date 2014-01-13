@@ -114,7 +114,7 @@ body {
 }
 .fb-like{
 	position:absolute;
-	margin-top:10px; 
+	margin:10px 10px 0 0; 
 float:right;  
 }
 
@@ -258,6 +258,7 @@ h1 {
 
 .touch .popup a:link, .touch  .popup a:visited, .touch  .popup a:active {
 	color: #FFF;
+	padding:0 2px 0 2px; 
 }
 
 .popup .content {
