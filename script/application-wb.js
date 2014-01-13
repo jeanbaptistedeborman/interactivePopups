@@ -70,8 +70,16 @@ $("document").ready(function() {"use strict";
 		button_$.css('left', Number(pos_array[0]));
 		button_$.attr('data-index', index);
 		element_$.attr('data-index', index);
+		var delay_num = Number (pos_array[1]*4) + 1000;
+		setTimeout (function (){
+			//alert ("timeOut"); 
+			
+			$('#application').append(button_$);
+			
+		}, delay_num);  
 
-		$('#application').append(button_$);
+
+
 
 		popups_array.push(element_$);
 		buttons_array.push(button_$);
@@ -83,24 +91,8 @@ $("document").ready(function() {"use strict";
 		removeLast();
 	});
 
+	
 	buttons_$.bind('click', function() {
-		var popup_$, this_$ = $(this), index, a_$;
-		if (!Modernizr.touch) {
-
-			index = this_$.attr('data-index');
-
-			popup_$ = $(popups_$[index]);
-			a_$ = popup_$.find('a');
-			if (a_$.length > 0) {
-
-				window.open(a_$.attr('href'));
-			}
-
-		}
-
-	});
-
-	buttons_$.bind('mouseover', function() {
 
 		var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
 		index = this_$.attr('data-index');
@@ -137,7 +129,6 @@ $("document").ready(function() {"use strict";
 		}
 
 		height_num = 'auto';
-		//this_$.position().top - top_num + this_$.height() + 10;
 
 		popup_$.css({
 

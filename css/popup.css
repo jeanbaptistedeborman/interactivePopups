@@ -19,6 +19,17 @@ to {
 
 @-webkit-keyframes
 zoomIn {from {
+	width: 1px;
+	Xopacity: 0;
+}
+to {
+	width: 3px;
+	Xopacity: 1;
+}
+}
+
+@-webkit-keyframes
+zoomIn {from {
 	xwidth: 1px;
 	opacity: 0;
 }
@@ -27,40 +38,76 @@ to {
 	opacity: 1;
 }
 }
+
 @keyframes
-zoomIn {from {
-	Xwidth: 1px;
-	opacity: 0;
+highLight {from {
+	Xbackground-size: 80%;
+	opacity: .8;
 }
 to {
-	Xwidth: 1200px;
+	Xbackground-size: 80%;
 	opacity: 1;
 }
 }
+@-webkit-keyframes
+highLight {
+	
+	
+0% {
+
+	opacity: 0;
+	margin-top:-150px; 
+	background-size: 10%;
+
+}
+
+60% {
+	background-size: 100%;
+	margin-top:0px;
+	opacity: 1; 
+}
+80% {
+	background-size: 100%;
+	margin-top:0px;
+	opacity: 1; 
+}
+85% {
+	background-size: 100%;
+	margin-top:0px;
+	opacity: .8; 
+}
+
+100% {
+	background-size: 100%;
+	margin-top:0px;
+	opacity: 1; 
+}
+
+}
 
 #languageMenu {
-	position:absolute;
-	top:10px; 
-	right:10px;  
+	position: absolute;
+	top: 10px;
+	right: 10px;
 }
 
 #languageMenu span {
-	display:inline-block; 
-	height:20px; 
-	width:20px;
-	line-height:20px;  
-	font-size:12px; 
-	margin-left:10px; 
+	display: inline-block;
+	height: 20px;
+	width: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	margin-left: 10px;
 	border: 1px solid #fff;
-	opacity:.7;
-	cursor:pointer;
-	border-radius: 2px;   
+	opacity: .7;
+	cursor: pointer;
+	border-radius: 2px;
 }
 
 #languageMenu .selected {
-	background-color:#FFF;
-	color:#000; 
-	cursor:auto; 
+	background-color: #FFF;
+	color: #000;
+	cursor: auto;
 }
 
 .lg-nl .fr {
@@ -73,14 +120,13 @@ to {
 
 body {
 	position: relative;
-	background-color: #eee;
+	background-color: #fff;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 400;
 	width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	
 }
 .no-touch body {
 	margin: 50px auto 0px auto;
@@ -101,21 +147,20 @@ body {
 	text-align: center;
 	-webkit-animation: zoomIn .3s;
 	animation: zoomIn .3s;
- 
 	height: 600px;
 	overflow: hidden;
 }
 #logo {
-	position:absolute;
-	width:40px; 
-	height:auto; 
-	left:10px; 
-	bottom:10px;  
+	position: absolute;
+	width: 40px;
+	height: auto;
+	left: 10px;
+	bottom: 10px;
 }
-.fb-like{
-	position:absolute;
-	margin:10px 10px 0 0; 
-float:right;  
+.fb-like {
+	position: absolute;
+	margin: 10px 10px 0 0;
+	float: right;
 }
 
 #illustration {
@@ -127,7 +172,7 @@ float:right;
 	Xborder-radius: 10px;
 }
 .no-touch #application {
-	border: solid 1px #99ccff; 
+	border: solid 1px #99ccff;
 	box-shadow: 0px 5px 30px #aaa;
 }
 header {
@@ -139,9 +184,8 @@ header {
 }
 h1 {
 	font-family: 'Great Vibes', cursive;
-	
 	font-size: 60px;
-	margin: 40px 0 0 0; 
+	margin: 40px 0 0 0;
 	opacity: .9;
 	font-weight: normal;
 	text-shadow: #fff 0px 0px 0px;
@@ -165,21 +209,23 @@ h1 {
 	font-weight: normal;
 }
 .touch .popup h2 {
-	font-size:36px;
-	padding: 0 0 20px 0;  
-	
+	font-size: 36px;
+	padding: 0 0 20px 0;
 }
 .button {
-	width: 25px;
-	height: 25px;
+	-webkit-animation: highLight 3s;
+	animation: highLight 3s;  
+	width: 35px;
+	height: 35px;
 	background: url('../img/button0001.png');
 	background-size: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
 	position: absolute;
 	top: 100px;
 	left: 100px;
 	cursor: pointer;
 }
-
 
 .button.selected {
 	background: url('../img/button0002.png');
@@ -199,7 +245,7 @@ h1 {
 	color: #333;
 	box-shadow: 0px 5px 20px #003366;
 	border-radius: 3px;
-	background-color:#FFFFFF; 
+	background-color: #FFFFFF;
 }
 
 .touch .popup {
@@ -207,38 +253,27 @@ h1 {
 	position: absolute;
 	width: 800px;
 	margin: 30px 300px 0px 200px;
-	padding:20px 20px 20px 20px;  
-
-
+	padding: 20px 20px 20px 20px;
 }
 .popup .link {
-	
-		Xdisplay: block;
-		text-align:right; 
-		margin-top:20px; 
-	
+
+	Xdisplay: block;
+	text-align: right;
+	margin-top: 20px;
 }
 .popup a {
-	
 
-	position:relative; 
-	right:0px;
-
-
-
+	position: relative;
+	right: 0px;
 	padding: 2px;
 	text-decoration: none;
-
-	margin-top:10px;  
-
-	text-align:right; 
+	margin-top: 10px;
+	text-align: right;
 }
 
 .touch .popup a {
-	
-	
-	color:#ff0; 
 
+	color: #ff0;
 	text-transform: uppercase;
 	background: #00cc99;
 }
@@ -249,8 +284,7 @@ h1 {
 	color: #666;
 }
 .touch h2 {
-	
-	
+
 }
 .touch .click-text {
 	display: none;
@@ -258,7 +292,7 @@ h1 {
 
 .touch .popup a:link, .touch  .popup a:visited, .touch  .popup a:active {
 	color: #FFF;
-	padding:0 2px 0 2px; 
+	padding: 0 2px 0 2px;
 }
 
 .popup .content {
@@ -266,6 +300,6 @@ h1 {
 	background: #ffffff; /* Old browsers */
 	padding: 20px 20px 20px 20px;
 	position: relative;
-	height:100%; 
+	height: 100%;
 }
 
