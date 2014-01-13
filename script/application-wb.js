@@ -65,7 +65,6 @@ $("document").ready(function() {"use strict";
 	popups_$.each(function(index, element) {
 
 		var button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
-		//alert (pos_array[0]);
 		button_$.addClass('button');
 		button_$.css('top', Number(pos_array[1]));
 		button_$.css('left', Number(pos_array[0]));
@@ -117,6 +116,7 @@ $("document").ready(function() {"use strict";
 				removeLast();
 			}
 		}
+		popup_$.stop (); 
 
 		this_$.addClass('selected');
 		lastPopup_$ = popup_$;
