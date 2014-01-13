@@ -55,28 +55,16 @@ highLight {
 	
 0% {
 
-	opacity: 0;
-	margin-top:-150px; 
+
 	background-size: 10%;
 
 }
 
 
-70% {
-	background-size: 70%;
-	margin-top:0px;
- 
-}
-98% {
-	background-size: 70%;
-	margin-top:0px;
- 
-}
-
 100% {
 	background-size: 100%;
-	margin-top:0px;
 
+ 
 }
 
 }
@@ -84,31 +72,18 @@ highLight {
 @keyframes
 highLight {
 	
-	
 0% {
 
-	opacity: 0;
-	margin-top:-150px; 
+
 	background-size: 10%;
 
 }
 
 
-80% {
-	background-size: 70%;
-	margin-top:0px;
-	opacity: 1; 
-}
-85% {
-	background-size: 70%;
-	margin-top:0px;
-	opacity: .8; 
-}
-
 100% {
 	background-size: 100%;
-	margin-top:0px;
-	opacity: 1; 
+
+ 
 }
 
 }
@@ -128,7 +103,21 @@ highLight {
 	font-size: 12px;
 	margin-left: 10px;
 	border: 1px solid #fff;
-	opacity: .7;
+	opacity: .8;
+	cursor: pointer;
+	border-radius: 2px;
+}
+
+.closeButton {
+	position:absolute; 
+	top:5px; 
+	right:5px;
+	background:url(../img/close.png);
+	background-size:100%;   
+	height: 12px;
+	width: 12px;
+	border: 1px solid #000;
+	
 	cursor: pointer;
 	border-radius: 2px;
 }
@@ -242,8 +231,8 @@ h1 {
 	padding: 0 0 20px 0;
 }
 .button {
-	-webkit-animation: highLight 5s;
-	animation: highLight 5s;  
+	-webkit-animation: highLight .5s;
+	animation: highLight .5s;  
 	width: 35px;
 	height: 35px;
 	background: url('../img/button0001.png');
@@ -291,12 +280,12 @@ h1 {
 	margin-top: 20px;
 }
 .popup a {
-
+display:block; 
 	position: relative;
 	right: 0px;
 	padding: 2px;
-	text-decoration: none;
-	margin-top: 10px;
+	Xtext-decoration: none;
+	margin-top: 5px;
 	text-align: right;
 }
 
@@ -307,19 +296,24 @@ h1 {
 	background: #00cc99;
 }
 .no-touch a {
-	font-style: italic;
+	Xfont-style: italic;
 }
-.no-touch a, .no-touch .popup a:link, .no-touch .popup  a:visited {
+.no-touch a, .no-touch .popup a:link {
 	color: #666;
+}
+.no-touch .popup a:hover {
+	color: #0071e1; 
+	
+	
 }
 .touch h2 {
 
 }
-.touch .click-text {
+.XXXXtouch .click-text {
 	display: none;
 }
 
-.touch .popup a:link, .touch  .popup a:visited, .touch  .popup a:active {
+.XXXtouch .popup a:link, .touch  .popup a:visited, .touch  .popup a:active {
 	color: #FFF;
 	padding: 0 2px 0 2px;
 }

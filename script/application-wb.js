@@ -16,20 +16,17 @@ $("document").ready(function() {"use strict";
 
 	if (userLang_str.toString().toLowerCase().indexOf('nl') !== -1) {
 		selectedLanguage_str = 'nl';
-		
 
 	} else {
 		selectedLanguage_str = 'fr';
 
 	}
- 
-	var selection_str = "data-id = '"+ selectedLanguage_str + "'"; 
-	
-		
-	languageMenu_$.find("span["+selection_str+"]").trigger('click');
+
+	var selection_str = "data-id = '" + selectedLanguage_str + "'";
+
+	languageMenu_$.find("span[" + selection_str + "]").trigger('click');
 	$('html').toggleClass("lg-" + selectedLanguage_str);
 
-	
 	languageMenu.onSelect = function() {
 		//alert ("onselect");
 		var lg_str = this.selected_$.attr('data-id');
@@ -43,6 +40,56 @@ $("document").ready(function() {"use strict";
 
 	popups_$ = $('.popup').detach();
 	$('#application').append($('header'));
+
+	function clickButton() {
+
+		//alert('click');
+
+		var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
+
+		index = this_$.attr('data-index');
+
+		popup_$ = $(popups_$[index]);
+		popup_$.stop();
+		popup_$.css('opacity', 1);
+		popup_$.css('display', 'block');
+		
+		if (lastPopup_$ !== undefined) {
+			//console.log (lastPopup_$.attr('data-index') +" / " + popup_$.attr('data-index'));
+
+			if (lastPopup_$.attr('data-index') !== popup_$.attr('data-index')) {
+
+				removeLast();
+			}
+		}
+
+		this_$.addClass('selected');
+		lastPopup_$ = popup_$;
+		popup_$.addClass('reveal');
+
+		$('#application').append(popup_$);
+
+		if (!Modernizr.touch) {
+			left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
+			if (left_num < 10) {
+				left_num = 10;
+			}
+			var max_pos = $('#application').width() - popup_$.width() - 10;
+			if (left_num > max_pos) {
+				left_num = max_pos;
+			}
+		}
+
+		height_num = 'auto';
+
+		popup_$.css({
+
+			left : left_num,
+			height : height_num
+		});
+		lastPopup_$ = popup_$;
+
+	}
 
 	function removeLast() {
 		if (lastPopup_$ !== undefined) {
@@ -64,22 +111,26 @@ $("document").ready(function() {"use strict";
 
 	popups_$.each(function(index, element) {
 
-		var button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
+		var close_$ = $('<div></div>'), button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
+		close_$.addClass ('closeButton');  
+		close_$.bind ('click', removeLast);
+		element_$.append (close_$);  
 		button_$.addClass('button');
-		button_$.css('top', Number(pos_array[1]-10));
-		button_$.css('left', Number(pos_array[0]));
+		button_$.css('top', Number(pos_array[1] - 5));
+		button_$.css('left', Number(pos_array[0] -5));
 		button_$.attr('data-index', index);
+		button_$.bind('click', clickButton);
 		element_$.attr('data-index', index);
-		var delay_num = Number (pos_array[1]*6) + 2000;
-		setTimeout (function (){
-			//alert ("timeOut"); 
-			
+		
+		
+		
+		var delay_num = Number(pos_array[1] * 8) + 2000;
+		setTimeout(function() {
+			//alert ("timeOut");
+
 			$('#application').append(button_$);
-			
-		}, delay_num);  
 
-
-
+		}, delay_num);
 
 		popups_array.push(element_$);
 		buttons_array.push(button_$);
@@ -87,56 +138,12 @@ $("document").ready(function() {"use strict";
 	});
 
 	buttons_$ = $('.button');
+
 	buttons_$.bind('mouseout', function() {
 		removeLast();
 	});
+	//alert($('buttons').length);
 
-	
-	buttons_$.bind('click touch', function() {
-
-		var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
-		index = this_$.attr('data-index');
-
-		popup_$ = $(popups_$[index]);
-		popup_$.css('opacity', 1);
-		popup_$.css('display', 'block');
-		if (lastPopup_$ !== undefined) {
-			//console.log (lastPopup_$.attr('data-index') +" / " + popup_$.attr('data-index'));
-
-			if (lastPopup_$.attr('data-index') !== popup_$.attr('data-index')) {
-
-				removeLast();
-			}
-		}
-		popup_$.stop (); 
-
-		this_$.addClass('selected');
-		lastPopup_$ = popup_$;
-		popup_$.addClass('reveal');
-
-		$('#application').append(popup_$);
-
-
-		if (!Modernizr.touch) {
-			left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
-			if (left_num < 10) {
-				left_num = 10; 
-			}
-			var max_pos = $('#application').width () - popup_$.width() -10; 
-			if (left_num > max_pos) {
-				left_num = max_pos; 
-			}
-		}
-
-		height_num = 'auto';
-
-		popup_$.css({
-
-			left : left_num,
-			height : height_num
-		});
-		lastPopup_$ = popup_$;
-
-	});
+	buttons_$.bind('click', clickButton);
 
 });
