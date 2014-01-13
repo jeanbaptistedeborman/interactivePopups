@@ -205,7 +205,6 @@ h1 {
 	margin: 40px 0 0 0;
 	opacity: .9;
 	font-weight: normal;
-	text-shadow: #fff 0px 0px 0px;
 	-webkit-font-smoothing: antialiased;
 }
 #subtitle {
@@ -292,7 +291,9 @@ h1 {
 	text-transform: uppercase;
 	background: #00cc99;
 }
-
+.no-touch a {
+	Xfont-style: italic;
+}
 .popup a, .popup a:link {
 	color: #666;
 }
@@ -304,7 +305,7 @@ h1 {
 	display: none;
 }
 
-.XXXtouch .popup a:link, .touch  .popup a:visited, .touch  .popup a:active {
+.XXXtouch .popup a:link, .XXXtouch  .popup a:visited, .XXXtouch  .popup a:active {
 	color: #FFF;
 	padding: 0 2px 0 2px;
 }
