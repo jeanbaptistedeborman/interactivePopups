@@ -292,18 +292,14 @@ h1 {
 	text-transform: uppercase;
 	background: #00cc99;
 }
-.no-touch a {
-	Xfont-style: italic;
-}
-.no-touch a, .no-touch .popup a:link {
+
+.popup a, .popup a:link {
 	color: #666;
 }
-.no-touch .popup a:hover {
+.popup a:hover {
 	color: #0071e1;
 }
-.touch h2 {
 
-}
 .XXXXtouch .click-text {
 	display: none;
 }
