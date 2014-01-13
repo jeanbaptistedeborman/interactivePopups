@@ -113,13 +113,10 @@ body {
 	bottom:10px;  
 }
 .fb-like{
-	text-align:right; 
-	position:absolute; 
+	position:absolute;
 	margin-top:10px; 
-	right:0px; 
- 
-	
-	
+	right:0px;
+	bottom:10px; 
 }
 
 #illustration {
