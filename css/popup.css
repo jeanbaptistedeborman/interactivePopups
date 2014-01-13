@@ -115,8 +115,7 @@ body {
 .fb-like{
 	position:absolute;
 	margin-top:10px; 
-	right:0px;
-	bottom:10px; 
+float:right;  
 }
 
 #illustration {
