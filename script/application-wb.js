@@ -66,11 +66,11 @@ $("document").ready(function() {"use strict";
 
 		var button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
 		button_$.addClass('button');
-		button_$.css('top', Number(pos_array[1]));
+		button_$.css('top', Number(pos_array[1]-10));
 		button_$.css('left', Number(pos_array[0]));
 		button_$.attr('data-index', index);
 		element_$.attr('data-index', index);
-		var delay_num = Number (pos_array[1]*4) + 1000;
+		var delay_num = Number (pos_array[1]*6) + 2000;
 		setTimeout (function (){
 			//alert ("timeOut"); 
 			
@@ -92,7 +92,7 @@ $("document").ready(function() {"use strict";
 	});
 
 	
-	buttons_$.bind('click', function() {
+	buttons_$.bind('click touch', function() {
 
 		var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
 		index = this_$.attr('data-index');

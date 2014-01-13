@@ -61,18 +61,46 @@ highLight {
 
 }
 
-60% {
+
+70% {
+	background-size: 70%;
+	margin-top:0px;
+ 
+}
+98% {
+	background-size: 70%;
+	margin-top:0px;
+ 
+}
+
+100% {
 	background-size: 100%;
 	margin-top:0px;
-	opacity: 1; 
+
 }
+
+}
+
+@keyframes
+highLight {
+	
+	
+0% {
+
+	opacity: 0;
+	margin-top:-150px; 
+	background-size: 10%;
+
+}
+
+
 80% {
-	background-size: 100%;
+	background-size: 70%;
 	margin-top:0px;
 	opacity: 1; 
 }
 85% {
-	background-size: 100%;
+	background-size: 70%;
 	margin-top:0px;
 	opacity: .8; 
 }
@@ -84,6 +112,7 @@ highLight {
 }
 
 }
+
 
 #languageMenu {
 	position: absolute;
@@ -154,8 +183,8 @@ body {
 	position: absolute;
 	width: 40px;
 	height: auto;
-	left: 10px;
-	bottom: 10px;
+	left: 15px;
+	bottom: 15px;
 }
 .fb-like {
 	position: absolute;
@@ -213,8 +242,8 @@ h1 {
 	padding: 0 0 20px 0;
 }
 .button {
-	-webkit-animation: highLight 3s;
-	animation: highLight 3s;  
+	-webkit-animation: highLight 5s;
+	animation: highLight 5s;  
 	width: 35px;
 	height: 35px;
 	background: url('../img/button0001.png');
@@ -227,7 +256,7 @@ h1 {
 	cursor: pointer;
 }
 
-.button.selected {
+.button:hover {
 	background: url('../img/button0002.png');
 	background-size: 100%;
 }
