@@ -112,12 +112,12 @@ body {
 	left:10px; 
 	bottom:10px;  
 }
-.fb-like {
-	position:absolute;
+.fb-like{
+	text-align:right; 
+	position:absolute; 
+	margin-top:30px; 
+	right:0px; 
  
- 
-	right:10px; 
-	bottom:10px;  
 	
 	
 }
@@ -169,7 +169,7 @@ h1 {
 	font-weight: normal;
 }
 .touch .popup h2 {
-	font-size:48px;
+	font-size:36px;
 	padding: 0 0 20px 0;  
 	
 }
@@ -207,7 +207,7 @@ h1 {
 }
 
 .touch .popup {
-	font-size: 22px;
+	font-size: 18px;
 	position: absolute;
 	width: 800px;
 	margin: 30px 300px 0px 200px;
