@@ -21,11 +21,9 @@
 		<script src='script/application-wb.js'></script>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="stylesheet" href="css/normalize.css" />
 		<link rel="stylesheet" href="css/popup.css" />
-		<link rel="shortcut icon" href="/favicon.ico" />
+	
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 	</head>
@@ -43,6 +41,9 @@
 					fjs.parentNode.insertBefore(js, fjs);
 				}(document, 'script', 'facebook-jssdk'));
 		</script>
+		
+		
+		<div class = 'loading'></div>
 
 		<header>
 
@@ -57,8 +58,12 @@
 			<span id='subtitle' class='nl'>- Sous-titre NL -</span>
 
 		</header>
-		<div id='application'>
-			<img id='illustration' src='img/boitsfort.png' />
+	
+		
+	
+		
+		<div id='application' style ="display:none">
+			<img  id='illustration' src='img/boitsfort.png' />
 			<a href='http://www.watermael-boitsfort.be/' target='_blank'><img id='logo' src='img/logo.png' /></a>
 		</div>
 		

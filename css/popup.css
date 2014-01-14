@@ -1,57 +1,58 @@
 @keyframes
 reveal {
 from {
-	top: -200px;
+    top: -200px;
 }
 to {
-	top: 0px;
+    top: 0px;
 }
 }
 
 @-webkit-keyframes
 reveal {from {
-	top: -200px;
+    top: -200px;
 }
 to {
-	top: 0px;
+    top: 0px;
 }
 }
 
 @-webkit-keyframes
-zoomIn {from {
-	width: 1px;
-	Xopacity: 0;
+zoomIn {
+    
+    0% {
+   
+    opacity:0;
 }
-to {
-	width: 3px;
-	Xopacity: 1;
-}
-}
-
-@-webkit-keyframes
-zoomIn {from {
-	xwidth: 1px;
-	opacity: 0;
-}
-to {
-	Xwidth: 1200px;
-	opacity: 1;
+100% {
+    opacity:1;
 }
 }
 
 @keyframes
-highLight {from {
-	Xbackground-size: 80%;
-	opacity: .8;
+zoomIn {from {
+    xwidth: 1px;
+    opacity: 0;
 }
 to {
-	Xbackground-size: 80%;
-	opacity: 1;
+    Xwidth: 1200px;
+    opacity: 1;
+}
+}
+
+@keyframes
+flyIn {from {
+    Xbackground-size: 80%;
+    opacity: .8;
+}
+to {
+    Xbackground-size: 80%;
+    opacity: 1;
 }
 }
 
 @-webkit-keyframes
-highLight {
+flyIn {
 
 0% {
 margin-top:150px;
@@ -69,7 +70,7 @@ background-size: 100%;
 }
 
 @keyframes
-highLight {
+flyIn {
 
 0% {
 margin-top:150px;
@@ -86,260 +87,287 @@ background-size: 100%;
 
 }
 
-@-webkit-keyframes glow {
-	0% {
-		
-		opacity:.6; 
-		background-size: 95%;
-	}
-	
-	100% {
-		
-		opacity:1;
-		background-size: 100%; 
-	}
-	
-	
-	
+@-webkit-keyframes
+loadingAnim {
+
+0% {
+opacity:0;
+margin-left:-200px;
+
+}
+
+30% {
+opacity:.3;
+margin-left:-60px;
+
+}
+
+50% {
+opacity:1;
+margin-left:-60px;
+
+}
+100% {
+margin-left:200px;
+opacity:0;
+
+}
+
 }
 
 #languageMenu {
-	position: absolute;
-	top: 10px;
-	right: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 #languageMenu span {
-	display: inline-block;
-	height: 20px;
-	width: 20px;
-	line-height: 20px;
-	font-size: 12px;
-	margin-left: 10px;
-	border: 1px solid #fff;
-	opacity: .8;
-	cursor: pointer;
-	border-radius: 2px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    margin-left: 10px;
+    border: 1px solid #fff;
+    opacity: .8;
+    cursor: pointer;
+    border-radius: 2px;
 }
 
 .closeButton {
-	position: absolute;
-	top: 5px;
-	right: 5px;
-	background: url(../img/close.png);
-	background-size: 100%;
-	height: 12px;
-	width: 12px;
-	border: 1px solid #000;
-	cursor: pointer;
-	border-radius: 2px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: url(../img/close.png);
+    background-size: 100%;
+    height: 12px;
+    width: 12px;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 2px;
 }
 .touch .closeButton {
 
-	height: 24px;
-	width: 24px;
+    height: 24px;
+    width: 24px;
 }
 
 #languageMenu .selected {
-	background-color: #FFF;
-	color: #000;
-	cursor: auto;
+    background-color: #FFF;
+    color: #000;
+    cursor: auto;
 }
 
 .lg-nl .fr {
-	display: none;
+    display: none;
 }
 
 .lg-fr .nl {
-	display: none;
+    display: none;
 }
 
 body {
-	position: relative;
-	background-color: #fff;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 400;
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+    position: relative;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
 .no-touch body {
-	margin: 50px auto 0px auto;
+    margin: 50px auto 0px auto;
 }
 .touch body {
-	background-color: #fff;
+    background-color: #fff;
 }
 
-
 .reveal {
-	animation: reveal 0.3s;
-	-webkit-animation: reveal 0.3s;
+    animation: reveal 0.3s;
+    -webkit-animation: reveal 0.3s;
+}
+
+.animStage{
+     -webkit-animation:zoomIn 2s;
+    animation:zoomIn 2s;
 }
 
 #application {
-	margin-left: auto;
-	margin-right: auto;
-	position: relative;
-	text-align: center;
-	-webkit-animation: zoomIn .3s;
-	animation: zoomIn .3s;
-	height: 600px;
-	overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: center;
+
+    height: 600px;
+    overflow: hidden;
 }
 #logo {
-	position: absolute;
-	width: 40px;
-	height: auto;
-	left: 15px;
-	bottom: 15px;
+    position: absolute;
+    width: 40px;
+    height: auto;
+    left: 15px;
+    bottom: 15px;
 }
 .fb-like {
-	position: absolute;
-	margin: 10px 10px 0 0;
-	float: right;
+    position: absolute;
+    margin: 10px 10px 0 0;
+    float: right;
 }
 
 #illustration {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0px;
-	left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
 }
 .no-touch #application {
-	border: solid 1px #99ccff;
-	box-shadow: 0px 5px 30px #ccc;
+    border: solid 1px #99ccff;
+    box-shadow: 0px 5px 30px #ccc;
 }
 header {
-	text-align: center;
-	padding-top: 25px;
-	position: relative;
-	color: #FFF;
-	width: 100%;
+    text-align: center;
+    padding-top: 25px;
+    position: relative;
+    color: #FFF;
+    width: 100%;
 }
 h1 {
-	font-family: 'Great Vibes', cursive;
-	font-size: 60px;
-	margin: 40px 0 0 0;
-	opacity: .9;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    margin: 40px 0 0 0;
+    opacity: .9;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
 }
 #subtitle {
-	text-transform: uppercase;
-	letter-spacing: 0.3em;
-	font-size: smaller;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    font-size: smaller;
 }
 .popup h2 {
-	font-family: 'Great Vibes', cursive;
-	-webkit-font-smoothing: antialiased;
-	font-size: 30px;
-	padding: 0 0 5px 0;
-	margin: 0;
-	font-weight: 400;
-	text-align: left;
-	line-height: 36px;
-	font-weight: normal;
+    font-family: 'Great Vibes', cursive;
+    -webkit-font-smoothing: antialiased;
+    font-size: 30px;
+    padding: 0 0 5px 0;
+    margin: 0;
+    font-weight: 400;
+    text-align: left;
+    line-height: 36px;
+    font-weight: normal;
 }
 .touch .popup h2 {
-	font-size: 36px;
-	padding: 0 0 20px 0;
+    font-size: 36px;
+    padding: 0 0 20px 0;
 }
 .glow {
-	-webkit-animation:glow 1s alternate infinite; 
-	
-	
+    -webkit-animation: glow 1s alternate infinite;
+}
+
+.loading {
+    position: absolute;
+    top:300px; 
+    left:600px; 
+ 
+    margin: 0 auto 0 auto;
+    width: 60px;
+    height: 20px;
+    -webkit-animation: loadingAnim 1s infinite;
+    animation: loadingAnim 1s infinite;
+    background: url('../img/button0002.png');
+    background-position: center;
+    background-size:20px; 
+    Xbackground-repeat: no-repeat;
 }
 
 .button {
-	-webkit-animation:highLight 1s;
-	animation:highLight 1s;
-	
-	width: 35px;
-	height: 35px;
-	background: url('../img/button0001.png');
-	background-size: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 100px;
-	left: 100px;
-	cursor: pointer;
+    -webkit-animation: flyIn 1s;
+    animation: flyIn 1s;
+    width: 35px;
+    height: 35px;
+    background: url('../img/button0001.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    cursor: pointer;
 }
 
 .button:hover {
-	background: url('../img/button0002.png');
-	background-size: 100%;
+    background: url('../img/button0002.png');
+    background-size: 100%;
 }
 
 .popup {
-	width: 300px;
-	overflow: hidden;
-	position: absolute;
-	font-size: 11px;
-	line-height: 1.3em;
-	top: 0px;
-	margin-top: 10px;
-	text-align: justify;
-	color: #333;
-	box-shadow: 0px 5px 20px #003366;
-	border-radius: 3px;
-	background-color: #FFFFFF;
+    width: 300px;
+    overflow: hidden;
+    position: absolute;
+    font-size: 11px;
+    line-height: 1.3em;
+    top: 0px;
+    margin-top: 10px;
+    text-align: justify;
+    color: #333;
+    box-shadow: 0px 5px 20px #003366;
+    border-radius: 3px;
+    background-color: #FFFFFF;
 }
 
 .touch .popup {
-	font-size: 18px;
-	position: absolute;
-	width: 800px;
-	margin: 30px 300px 0px 200px;
-	padding: 20px 20px 20px 20px;
+    font-size: 18px;
+    position: absolute;
+    width: 800px;
+    margin: 30px 300px 0px 200px;
+    padding: 20px 20px 20px 20px;
 }
 .popup .link {
 
-	Xdisplay: block;
-	text-align: right;
-	margin-top: 20px;
+    Xdisplay: block;
+    text-align: right;
+    margin-top: 20px;
 }
 .popup a {
-	display: block;
-	position: relative;
-	right: 0px;
-	padding: 2px;
-	margin-top: 5px;
-	text-align: right;
+    display: block;
+    position: relative;
+    right: 0px;
+    padding: 2px;
+    margin-top: 5px;
+    text-align: right;
 }
 
 .XXXtouch .popup a {
 
-	color: #ff0;
-	text-transform: uppercase;
-	background: #00cc99;
+    color: #ff0;
+    text-transform: uppercase;
+    background: #00cc99;
 }
 .no-touch a {
-	Xfont-style: italic;
+    Xfont-style: italic;
 }
 .popup a, .popup a:link {
-	color: #666;
+    color: #666;
 }
 .popup a:hover {
-	color: #0071e1;
+    color: #0071e1;
 }
 
 .XXXXtouch .click-text {
-	display: none;
+    display: none;
 }
 
 .XXXtouch .popup a:link, .XXXtouch  .popup a:visited, .XXXtouch  .popup a:active {
-	color: #FFF;
-	padding: 0 2px 0 2px;
+    color: #FFF;
+    padding: 0 2px 0 2px;
 }
 
 .popup .content {
 
-	background: #ffffff; /* Old browsers */
-	padding: 20px 20px 20px 20px;
-	position: relative;
-	height: 100%;
+    background: #ffffff; /* Old browsers */
+    padding: 20px 20px 20px 20px;
+    position: relative;
+    height: 100%;
 }
 

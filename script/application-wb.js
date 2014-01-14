@@ -4,146 +4,154 @@
 /*jslint vars:true, white:true, nomen:true, plusplus:true */
 /*global $,SimpleMenu,Modernizr*/
 
-$("document").ready(function() {"use strict";
-	//$('html').addClass('lg-fr');
 
-	var userLang_str = navigator.language || navigator.userLanguage, POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
+$(window).load(function()  {"use strict";
 
-	//data-buttonPos
-	var languageMenu_$ = $('#languageMenu');
-	var languageMenu = new SimpleMenu(languageMenu_$);
-	var selectedLanguage_str;
+    //$('html').addClass('lg-fr');
 
-	if (userLang_str.toString().toLowerCase().indexOf('nl') !== -1) {
-		selectedLanguage_str = 'nl';
+    $('#application').css('display', 'block');
+    $('.loading').detach (); 
+    $('#illustration').addClass ("animStage"); 
 
-	} else {
-		selectedLanguage_str = 'fr';
+    
 
-	}
+    var userLang_str = navigator.language || navigator.userLanguage, POPUP_HEIGHT = 300, buttons_$ = $('.button'), lastPopup_$, popups_$, buttons_array = [], popups_array = [];
 
-	var selection_str = "data-id = '" + selectedLanguage_str + "'";
+    //data-buttonPos
+    var languageMenu_$ = $('#languageMenu');
+    var languageMenu = new SimpleMenu(languageMenu_$);
+    var selectedLanguage_str;
 
-	languageMenu_$.find("span[" + selection_str + "]").trigger('click');
-	$('html').toggleClass("lg-" + selectedLanguage_str);
+    if (userLang_str.toString().toLowerCase().indexOf('nl') !== -1) {
+        selectedLanguage_str = 'nl';
 
-	languageMenu.onSelect = function() {
-		//alert ("onselect");
-		var lg_str = this.selected_$.attr('data-id');
-		$('html').toggleClass("lg-fr", false);
-		$('html').toggleClass("lg-nl", false);
-		$('html').toggleClass("lg-" + lg_str, true);
+    } else {
+        selectedLanguage_str = 'fr';
 
-		//alert (lg_str);
+    }
 
-	};
+    var selection_str = "data-id = '" + selectedLanguage_str + "'";
 
-	popups_$ = $('.popup').detach();
-	$('#application').append($('header'));
+    languageMenu_$.find("span[" + selection_str + "]").trigger('click');
+    $('html').toggleClass("lg-" + selectedLanguage_str);
 
-	function clickButton() {
+    languageMenu.onSelect = function() {
+        //alert ("onselect");
+        var lg_str = this.selected_$.attr('data-id');
+        $('html').toggleClass("lg-fr", false);
+        $('html').toggleClass("lg-nl", false);
+        $('html').toggleClass("lg-" + lg_str, true);
 
-		//alert('click');
+        //alert (lg_str);
 
-		var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
+    };
 
-		index = this_$.attr('data-index');
+    function placeButtons() {
 
-		popup_$ = $(popups_$[index]);
-		popup_$.stop();
-		popup_$.css('opacity', 1);
-		popup_$.css('display', 'block');
-		
-		if (lastPopup_$ !== undefined) {
-			//console.log (lastPopup_$.attr('data-index') +" / " + popup_$.attr('data-index'));
+        popups_$ = $('.popup').detach();
+        $('#application').append($('header'));
 
-			if (lastPopup_$.attr('data-index') !== popup_$.attr('data-index')) {
+        popups_$.each(function(index, element) {
 
-				removeLast();
-			}
-		}
+            var close_$ = $('<div></div>'), button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
+            close_$.addClass('closeButton');
+            close_$.bind('click', removeLast);
+            element_$.append(close_$);
+            button_$.addClass('button');
+            button_$.css('top', Number(pos_array[1] - 5));
+            button_$.css('left', Number(pos_array[0] - 5));
+            button_$.attr('data-index', index);
+            button_$.bind('mouseover', clickButton);
+            element_$.attr('data-index', index);
 
-		this_$.addClass('selected');
-		lastPopup_$ = popup_$;
-		popup_$.addClass('reveal');
+            var delay_num = Number(pos_array[1] * 8) + 1500;
+            setTimeout(function() {
+                //alert ("timeOut");
 
-		$('#application').append(popup_$);
+                $('#application').append(button_$);
 
-		if (!Modernizr.touch) {
-			left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
-			if (left_num < 10) {
-				left_num = 10;
-			}
-			var max_pos = $('#application').width() - popup_$.width() - 10;
-			if (left_num > max_pos) {
-				left_num = max_pos;
-			}
-		}
+            }, delay_num);
+            setTimeout(function() {
+                button_$.addClass('glow');
 
-		height_num = 'auto';
+            }, delay_num + 3000);
 
-		popup_$.css({
+            popups_array.push(element_$);
+            buttons_array.push(button_$);
 
-			left : left_num,
-			height : height_num
-		});
-		lastPopup_$ = popup_$;
+        });
+    }
 
-	}
+    function clickButton() {
 
-	function removeLast() {
-		if (lastPopup_$ !== undefined) {
-			var index, button_$;
+        //alert('click');
 
-			index = lastPopup_$.attr('data-index');
+        var popup_$, this_$ = $(this), top_num, left_num, height_num, index;
 
-			button_$ = buttons_array[index];
-			button_$.removeClass('selected');
-			lastPopup_$.fadeOut(300, function() {
+        index = this_$.attr('data-index');
 
-				$(this).detach();
+        popup_$ = $(popups_$[index]);
+        popup_$.stop();
+        popup_$.css('opacity', 1);
+        popup_$.css('display', 'block');
 
-			});
+        if (lastPopup_$ !== undefined) {
+            //console.log (lastPopup_$.attr('data-index') +" / " + popup_$.attr('data-index'));
 
-		}
-	}
+            if (lastPopup_$.attr('data-index') !== popup_$.attr('data-index')) {
 
+                removeLast();
+            }
+        }
 
-	popups_$.each(function(index, element) {
+        this_$.addClass('selected');
+        lastPopup_$ = popup_$;
+        popup_$.addClass('reveal');
 
-		var close_$ = $('<div></div>'), button_$ = $('<div></div>'), element_$ = $(element), pos_array = element_$.attr('data-buttonPos').split(',');
-		close_$.addClass ('closeButton');  
-		close_$.bind ('click', removeLast);
-		element_$.append (close_$);  
-		button_$.addClass('button');
-		button_$.css('top', Number(pos_array[1] - 5));
-		button_$.css('left', Number(pos_array[0] -5));
-		button_$.attr('data-index', index);
-		button_$.bind('mouseover', clickButton);
-		element_$.attr('data-index', index);
-		
-		
-		
-		var delay_num = Number(pos_array[1] * 8) + 1500;
-		setTimeout(function() {
-			//alert ("timeOut");
+        $('#application').append(popup_$);
 
-			$('#application').append(button_$);
+        if (!Modernizr.touch) {
+            left_num = this_$.position().left + this_$.width() / 2 - popup_$.width() / 2;
+            if (left_num < 10) {
+                left_num = 10;
+            }
+            var max_pos = $('#application').width() - popup_$.width() - 10;
+            if (left_num > max_pos) {
+                left_num = max_pos;
+            }
+        }
 
-		}, delay_num);
-		setTimeout (function (){
-			button_$.addClass('glow');
-			
-		}, delay_num + 3000); 
+        height_num = 'auto';
 
-		popups_array.push(element_$);
-		buttons_array.push(button_$);
+        popup_$.css({
 
-	});
+            left : left_num,
+            height : height_num
+        });
+        lastPopup_$ = popup_$;
 
-	
-	//alert($('buttons').length);
+    }
 
-	//buttons_$.bind('click', clickButton);
+    function removeLast() {
+        if (lastPopup_$ !== undefined) {
+            var index, button_$;
+
+            index = lastPopup_$.attr('data-index');
+
+            button_$ = buttons_array[index];
+            button_$.removeClass('selected');
+            lastPopup_$.fadeOut(300, function() {
+
+                $(this).detach();
+
+            });
+
+        }
+    }
+    placeButtons();
+
+    //alert($('buttons').length);
+
+    //buttons_$.bind('click', clickButton);
 
 });
