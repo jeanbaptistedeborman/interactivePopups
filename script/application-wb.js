@@ -119,31 +119,31 @@ $("document").ready(function() {"use strict";
 		button_$.css('top', Number(pos_array[1] - 5));
 		button_$.css('left', Number(pos_array[0] -5));
 		button_$.attr('data-index', index);
-		button_$.bind('click', clickButton);
+		button_$.bind('mouseover', clickButton);
 		element_$.attr('data-index', index);
 		
 		
 		
-		var delay_num = Number(pos_array[1] * 8) + 2000;
+		var delay_num = Number(pos_array[1] * 8) + 1500;
 		setTimeout(function() {
 			//alert ("timeOut");
 
 			$('#application').append(button_$);
 
 		}, delay_num);
+		setTimeout (function (){
+			button_$.addClass('glow');
+			
+		}, delay_num + 3000); 
 
 		popups_array.push(element_$);
 		buttons_array.push(button_$);
 
 	});
 
-	buttons_$ = $('.button');
-
-	buttons_$.bind('mouseout', function() {
-		removeLast();
-	});
+	
 	//alert($('buttons').length);
 
-	buttons_$.bind('click', clickButton);
+	//buttons_$.bind('click', clickButton);
 
 });

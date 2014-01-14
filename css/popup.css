@@ -49,11 +49,12 @@ to {
 	opacity: 1;
 }
 }
+
 @-webkit-keyframes
 highLight {
 
 0% {
-margin-top:-50px;
+margin-top:150px;
 
 background-size: 10%;
 
@@ -71,7 +72,7 @@ background-size: 100%;
 highLight {
 
 0% {
-margin-top:-50px;
+margin-top:150px;
 
 background-size: 10%;
 
@@ -83,6 +84,23 @@ background-size: 100%;
 
 }
 
+}
+
+@-webkit-keyframes glow {
+	0% {
+		
+		opacity:.6; 
+		background-size: 95%;
+	}
+	
+	100% {
+		
+		opacity:1;
+		background-size: 100%; 
+	}
+	
+	
+	
 }
 
 #languageMenu {
@@ -153,6 +171,7 @@ body {
 	background-color: #fff;
 }
 
+
 .reveal {
 	animation: reveal 0.3s;
 	-webkit-animation: reveal 0.3s;
@@ -177,7 +196,7 @@ body {
 }
 .fb-like {
 	position: absolute;
-	margin: 10px 10px 0 0;
+	margin: 20px 10px 0 0;
 	float: right;
 }
 
@@ -190,7 +209,7 @@ body {
 }
 .no-touch #application {
 	border: solid 1px #99ccff;
-	box-shadow: 0px 5px 30px #aaa;
+	box-shadow: 0px 5px 30px #ccc;
 }
 header {
 	text-align: center;
@@ -214,7 +233,6 @@ h1 {
 }
 .popup h2 {
 	font-family: 'Great Vibes', cursive;
-	text-shadow: #000 0px .8px .8px;
 	-webkit-font-smoothing: antialiased;
 	font-size: 30px;
 	padding: 0 0 5px 0;
@@ -228,9 +246,16 @@ h1 {
 	font-size: 36px;
 	padding: 0 0 20px 0;
 }
+.glow {
+	-webkit-animation:glow 1s alternate infinite; 
+	
+	
+}
+
 .button {
-	-webkit-animation: highLight .5s;
-	animation: highLight .5s;
+	-webkit-animation:highLight 1s;
+	animation:highLight 1s;
+	
 	width: 35px;
 	height: 35px;
 	background: url('../img/button0001.png');
