@@ -288,8 +288,7 @@ h1 {
     width: 35px;
     height: 35px;
     background: url('../img/button0001.png');
-    background-size:contain; 
-    background-size: 100%;  
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -305,19 +304,9 @@ h1 {
 }
 
 .button:hover {
-       width: 35px;
-    height: 35px;
     background: url('../img/button0002.png');
     background-size: 100%;
 }
-
-.touch .button:hover {
-    width: 45px;
-    height: 45px;
-    background: url('../img/button0002.png');
-    background-size: 100%;
-}
-
 
 .popup {
     width: 340px;
