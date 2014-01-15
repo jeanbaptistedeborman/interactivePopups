@@ -154,6 +154,7 @@ opacity:0;
 
 #languageMenu .selected {
     background-color: #FFF;
+    cursor: default;
     color: #000;
     cursor: auto;
 }
