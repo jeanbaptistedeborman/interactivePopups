@@ -241,7 +241,7 @@ h1 {
     font-weight: normal;
     -webkit-font-smoothing: antialiased;
 }
-#subtitle {
+.subtitle {
     text-transform: uppercase;
     letter-spacing: 0.3em;
     font-size: smaller;
@@ -249,6 +249,7 @@ h1 {
 .popup h2 {
     font-family: 'Great Vibes', cursive;
     -webkit-font-smoothing: antialiased;
+    -webkit-text-shadow:0 0 0;
     font-size: 30px;
     padding: 0 0 5px 0;
     margin: 0;
@@ -295,6 +296,12 @@ h1 {
     left: 100px;
     cursor: pointer;
 }
+.touch .button {
+       width: 45px;
+    height: 45px;
+    
+    
+}
 
 .button:hover {
     background: url('../img/button0002.png');
@@ -302,14 +309,14 @@ h1 {
 }
 
 .popup {
-    width: 300px;
+    width: 340px;
     overflow: hidden;
     position: absolute;
     font-size: 11px;
     line-height: 1.3em;
     top: 0px;
     margin-top: 10px;
-    text-align: justify;
+    text-align: left;
     color: #333;
     box-shadow: 0px 5px 20px #003366;
     border-radius: 3px;
@@ -327,7 +334,7 @@ h1 {
 
     Xdisplay: block;
     text-align: right;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .popup a {
     display: block;
