@@ -64,7 +64,7 @@ $(window).load(function()  {"use strict";
             button_$.bind('mouseover', clickButton);
             element_$.attr('data-index', index);
 
-            var delay_num = Number(pos_array[1] * 8) + 1500;
+            var delay_num = Number(pos_array[1] * 8) + 500;
             setTimeout(function() {
                 //alert ("timeOut");
 
