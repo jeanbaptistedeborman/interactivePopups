@@ -1,338 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
+    <head>
+        <meta charset="utf-8" />
 
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-		<title>Meilleurs voeux - Beste wensen</title>
-		<meta name="description" content="L'administration communale de Watermael-Boitsfort vous souhaite une bonne année ! - Het Gemeentebestuur van Watermaal-Bosvoorde wenst U een gelukkig nieuwjaar !" />
+        <title>Meilleurs voeux - Beste wensen</title>
+        <meta name="description" content="L'administration communale de Watermael-Boitsfort vous souhaite une bonne année ! - Het Gemeentebestuur van Watermaal-Bosvoorde wenst U een gelukkig nieuwjaar !" />
+        <meta property="og:image" content="img/fbshare3.png"/>
+        <meta name="author" content="W-B" />
 
-		<meta name="author" content="W-B" />
-		
+        <meta name="viewport" content="width=1200" />
+        <script src='script/dev/modernizr.js'></script>
+        <script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
+        <script src='script/dev/utils'></script>
+        <script src='script/ui/simplemenu.js'></script>
+        <script src='script/application-wb.js'></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
 
-		<meta name="viewport" content="width=1200" />
-		<script src='script/dev/modernizr.js'></script>
-		<script src='http://code.jquery.com/jquery-1.10.2.min.js'></script>
-		<script src='script/dev/utils'></script>
-		<script src='script/ui/simplemenu.js'></script>
-		<script src='script/application-wb.js'></script>
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-		<link href="http://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="css/normalize.css" />
+        <link rel="stylesheet" href="css/popup.css" />
 
-		<link rel="stylesheet" href="css/normalize.css" />
-		<link rel="stylesheet" href="css/popup.css" />
-	
+    </head>
 
-	</head>
-	
+    <body>
 
+        <div class = 'loading'></div>
+        <div id="fb-root"></div>
+        <script>
+            ( function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id))
+                        return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=613236585378960";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+        </script>
 
-	<body>
-	    
-	       <div class = 'loading'></div>
-		<div id="fb-root"></div>
-		<script>
-			( function(d, s, id) {
-					var js, fjs = d.getElementsByTagName(s)[0];
-					if (d.getElementById(id))
-						return;
-					js = d.createElement(s);
-					js.id = id;
-					js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=613236585378960";
-					fjs.parentNode.insertBefore(js, fjs);
-				}(document, 'script', 'facebook-jssdk'));
-		</script>
+        <header>
 
-		<header>
+            <div id='languageMenu' class='languageMenu'>
+                <span data-id='fr'>FR</span><span data-id='nl'>NL</span>
+            </div>
 
-			<div id='languageMenu' class='languageMenu'>
-				<span data-id='fr'>FR</span><span data-id='nl'>NL</span>
-			</div>
+            <h1 class='fr'>Meilleurs voeux pour 2014</h1>
+            <span class='subtitle fr'>- 11 clics pour 11 actions remarquables à Watermael-Boitsfort -</span>
 
-			<h1 class='fr'>Meilleurs voeux pour 2014</h1>
-			<span class='subtitle fr'>- 11 clics pour 11 actions remarquables à Watermael-Boitsfort -</span>
+            <h1 class='nl'>Beste wensen voor 2014</h1>
+            <span class='subtitle nl'>- 11 kliks voor 11 opmerkelijke acties in Watermaal-Bosvoorde -</span>
 
-			<h1 class='nl'>Beste wensen voor 2014</h1>
-			<span class='subtitle nl'>- 11 kliks voor 11 opmerkelijke acties in Watermaal-Bosvoorde -</span>
+        </header>
+        <div id='application' style ="display:none">
+            <img id='illustration' src='img/boitsfort.png' />
+            <a href='http://www.watermael-boitsfort.be/' target='_blank'><img id='logo' src='img/logo.png' /></a>
+        </div>
 
-		</header>
-		<div id='application' style ="display:none">
-			<img id='illustration' src='img/boitsfort.png' />
-			<a href='http://www.watermael-boitsfort.be/' target='_blank'><img id='logo' src='img/logo.png' /></a>
-		</div>
-		
-		<div class="fb-like" data-href="http://wb-wishes.azurewebsites.net/?v=3" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-		
-		
-				
-<div class='popups' style ="display:none">
-		
-		<div class='popup' data-buttonPos='480,565'>
-			<div class='content fr'>
-				<h2>Maison communale</h2>
-				Gros changement dans le centre de Boitsfort! La place a été complètement rénovée et a accueilli pour la première fois les Apéros urbains et le marché de Noël!
-				<p>
-					Bloquez déjà votre agenda pour la fête des fleurs, du 30 mai au 1er juin!
-				<p>
-					Des services communaux disponibles et efficaces vous accueillent à la Maison communale.
-				<p>
-					L’espace mémoire s’agrandit et déménagera prochainement dans l’ancien commissariat de police, avec le service de la Vie sociale.</p>
-					<div class='link'>
-						<a href='http://www.watermael-boitsfort.be/fr/dernieresnouvelles/une-place-toute-neuve-pour-le-centre-de-boitsfort ' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Rénovation de la place</span></a>
-						<a href='https://www.facebook.com/aperosurbains' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Apéros urbains</span></a>
-						<a href='http://www.watermael-boitsfort.be/fr/commune/services-communaux' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Services communaux</span></a>
-					</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Gemeentehuis</h2>
-				Er is een grote verandering op til in Bosvoorde centrum! Het plein werd helemaal vernieuwd en voor het eerst vinden hier de stadsapéro en de kerstmarkt plaats!
-             <p>Kruis nu alvast voor het Bloemenfeest 30&amp; 31 mei en 1 juni in uw agenda aan! </p>
-			 <p>Meer inlichtingen bij de bevoegde gemeentelijke diensten in het gemeentehuis. </p>
-             <p>Het Centrum voor Lokale Geschiedenis breidt uit en verhuist binnenkort samen met de dienst Sociaal leven naar het voormalige politiecommissariaat. </p>
+        <div class="fb-like" data-href="http://wb-wishes.azurewebsites.net/?v=4" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
 
-				<div class='link'>
-					<a href='http://www.watermaal-bosvoorde.irisnet.be/nl/nieuws-1/de-nieuwe-look-van-het-centrum-van-bosvoorde?set_language=nl' target = '_blank'><span class='click-text'>De nieuwe look van </span>het centrum van Bosvoorde</a>
-				<a href='http://www.watermaal-bosvoorde.irisnet.be/nl/gemeente/gemeentediensten' target = '_blank'><span class='click-text'>Gemeentediensten </span></a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div>
-		<!-- END .POPUP-->
+        <div class='popups' style ="display:none">
 
-		<div class='popup' data-buttonPos='244,295'>
-			<div class='content fr'>
-				<h2>Place Keym</h2>
-				<p>A son tour, la place  Keym va être rénovée. Un architecte sera désigné cette année. Il fera des propositions qui seront présentées et discutées avec les habitants et les commerçants. Deux éducateurs de rue ont été engagés pour animer l’espace public et favoriser le mieux vivre ensemble. Vous les croiserez bientôt place Keym et place Wiener.</p>
-				<p>Du côté de l’Espace Delvaux: la salle de cinéma passe au numérique et les bibliothèques ont adopté un nouveau plan de développement de la lecture et élargissent leurs horaires.</p>
-				<div class='link'>
-					<a href='http://www.watermael-boitsfort.be/fr/commune/services-communaux/service-des-bibliotheques' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Les bibliothèques et ludothèques </span>de Watermael-Boitsfort</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Keymplein</h2>
-				<p>En ook het Keymplein krijgt een nieuwe look. Dit jaar wordt er een architect aangeduid die in overleg met de bewoners en de handelaars zijn voorstellen zal ontwikkelen. Twee nieuwe straathoekwerkers zullen zorgen voor de animatie op de openbare ruimte en voor een beter samenleven. U zal hen eerstdaags op het Keym- en het Wienerplein ontmoeten. </p>
-<p>In l’Espace Delvaux schakelde de bioscoopzaal over naar het digitale tijdperk, de bibliotheken keurden een nieuw ontwikkelingsplan voor het lezen goed en de openingsuren werden uitgebreid.</p> 
+            <div class='popup' data-buttonPos='480,565'>
+                <div class='content fr'>
+                    <h2>Maison communale</h2>
+                    Gros changement dans le centre de Boitsfort! La place a été complètement rénovée et a accueilli pour la première fois les Apéros urbains et le marché de Noël!
+                    <p>
+                        Bloquez déjà votre agenda pour la fête des fleurs, du 30 mai au 1er juin!
+                    <p>
+                        Des services communaux disponibles et efficaces vous accueillent à la Maison communale.
+                    <p>
+                        L’espace mémoire s’agrandit et déménagera prochainement dans l’ancien commissariat de police, avec le service de la Vie sociale.
+                    </p>
+                    <div class='link'>
+                        <a href='http://www.watermael-boitsfort.be/fr/dernieresnouvelles/une-place-toute-neuve-pour-le-centre-de-boitsfort ' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Rénovation de la place</span></a>
+                        <a href='https://www.facebook.com/aperosurbains' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Apéros urbains</span></a>
+                        <a href='http://www.watermael-boitsfort.be/fr/commune/services-communaux' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Services communaux</span></a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Gemeentehuis</h2>
+                    Er is een grote verandering op til in Bosvoorde centrum! Het plein werd helemaal vernieuwd en voor het eerst vinden hier de stadsapéro en de kerstmarkt plaats!
+                    <p>
+                        Kruis nu alvast voor het Bloemenfeest 30&amp; 31 mei en 1 juni in uw agenda aan!
+                    </p>
+                    <p>
+                        Meer inlichtingen bij de bevoegde gemeentelijke diensten in het gemeentehuis.
+                    </p>
+                    <p>
+                        Het Centrum voor Lokale Geschiedenis breidt uit en verhuist binnenkort samen met de dienst Sociaal leven naar het voormalige politiecommissariaat.
+                    </p>
 
-				
-			<div class='link'></div>
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
+                    <div class='link'>
+                        <a href='http://www.watermaal-bosvoorde.irisnet.be/nl/nieuws-1/de-nieuwe-look-van-het-centrum-van-bosvoorde?set_language=nl' target = '_blank'><span class='click-text'>De nieuwe look van </span>het centrum van Bosvoorde</a>
+                        <a href='http://www.watermaal-bosvoorde.irisnet.be/nl/gemeente/gemeentediensten' target = '_blank'><span class='click-text'>Gemeentediensten </span></a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div>
+            <!-- END .POPUP-->
 
-		<div class='popup' data-buttonPos='417,306'>
-			<div class='content fr'>
-				<h2>Le parc sportif des Trois Tilleuls</h2>
-				Dans le courant de l’année 2014, la piscine du Calypso sera dotée d’une nouvelle cuve en inox et d’un système de ventilation dernier cri qui permettra la réalisation d’économies d’énergie ! 
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Sportpark De drie linden</h2>
-				In de loop van 2014 krijgt het Calypso-zwembad een nieuwe roestvrije kuip en een ventilatiesysteem van de allerlaatste generatie die mooie energiebesparingen mogelijk maakt!
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-		
-		<div class='popup' data-buttonPos='618,295'>
-			<div class='content fr'>
-				<h2>Square des Archiducs</h2>
-				<p>La police vous accueille désormais dans le nouveau commissariat de la rue des Tritomas. </p>
-<p>Un nouveau plan logement pour faire face à la demande croissante de logements à prix abordables tout en préservant le caractère vert et paisible de notre commune a été adopté. Des ateliers participatifs avec les habitants auront pour objectif de dresser des lignes de conduite pour chaque terrain concerné. RDV du 19 au 29 mars 2014  pour la « semaine du logement ». Programme dans le prochain journal communal.</p>
+            <div class='popup' data-buttonPos='244,295'>
+                <div class='content fr'>
+                    <h2>Place Keym</h2>
+                    <p>
+                        A son tour, la place  Keym va être rénovée. Un architecte sera désigné cette année. Il fera des propositions qui seront présentées et discutées avec les habitants et les commerçants. Deux éducateurs de rue ont été engagés pour animer l’espace public et favoriser le mieux vivre ensemble. Vous les croiserez bientôt place Keym et place Wiener.
+                    </p>
+                    <p>
+                        Du côté de l’Espace Delvaux: la salle de cinéma passe au numérique et les bibliothèques ont adopté un nouveau plan de développement de la lecture et élargissent leurs horaires.
+                    </p>
+                    <div class='link'>
+                        <a href='http://www.watermael-boitsfort.be/fr/commune/services-communaux/service-des-bibliotheques' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Les bibliothèques et ludothèques </span>de Watermael-Boitsfort</a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Keymplein</h2>
+                    <p>
+                        En ook het Keymplein krijgt een nieuwe look. Dit jaar wordt er een architect aangeduid die in overleg met de bewoners en de handelaars zijn voorstellen zal ontwikkelen. Twee nieuwe straathoekwerkers zullen zorgen voor de animatie op de openbare ruimte en voor een beter samenleven. U zal hen eerstdaags op het Keym- en het Wienerplein ontmoeten.
+                    </p>
+                    <p>
+                        In l’Espace Delvaux schakelde de bioscoopzaal over naar het digitale tijdperk, de bibliotheken keurden een nieuw ontwikkelingsplan voor het lezen goed en de openingsuren werden uitgebreid.
+                    </p>
 
-				<div class='link'>
-					<a href='http://www.watermael-boitsfort.be/fr/dernieresnouvelles/nos-policiers-demenagent-rue-des-tritomas' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Un nouveau commissariat </span>rue des Tritomas</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-	
-			<div class='content nl'>
-				<h2>Aartshertogensquare</h2>
-				<p>De politie onthaalt u nu in een nieuw commissariaat in de Tritomasstraat. </p>
-<p>Een nieuw huisvestingsplan als antwoord op de groeiende vraag naar betaalbare woningen, maar met het behoud van het groene en landelijke karakter van onze gemeente. De participatieve workshops met de bewoners hebben tot doel specifieke gedragregels uit te tekenen. Kruis alvast de week van 19 tot 29 maart 2014 aan voor de « Week van het wonen ». Programma volgt in het volgende gemeenteblad.</p>
+                    <div class='link'></div>
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
 
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-		
-		<div class='popup' data-buttonPos='238,436'>
-			<div class='content fr'>
-				<h2>Eglise St-Hubert </h2>
-				<p>En accord avec l’Evêché, une nouvelle affectation pour l’église Saint-Hubert est désormais possible. Bientôt du logement à Saint-Hubert ?</p>
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Sint-Hubertuskerk</h2>
-In afspraak met het Bisdom zal de Sint-Hubertuskerk een andere bestemming krijgen. Zin om in een kerk te wonen? 
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-		
-		<div class='popup' data-buttonPos='40,370'>
-			<div class='content fr'>
-				<h2>Gare de Watermael</h2>
-				<p>Nous possédons des objets utiles et encore en bon état, mais dont nous n'avons plus l'usage? Ne les jetons pas, n'encombrons pas les poubelles, les décharges, les déchetteries, les parcs à conteneurs, pratiquons la solidarité et la simplicité: donnons-les! La «donnerie» aura à nouveau lieu à la gare de Watermael le 26 avril 2014 à partir de 12h.</p>
-				<p>Un dimanche par mois, venez aussi y faire réparer vos objets au Repair café.</p>
-                <p>Avenue des Archiducs, le givekot reçoit également les objets que vous n’utilisez plus et qui peuvent servir à quelqu’un d’autre. D’autres Givekots seront bientôt placés au Coin du Balai et avenue du Martin-Pêcheur.</p>
+            <div class='popup' data-buttonPos='417,306'>
+                <div class='content fr'>
+                    <h2>Le parc sportif des Trois Tilleuls</h2>
+                    Dans le courant de l’année 2014, la piscine du Calypso sera dotée d’une nouvelle cuve en inox et d’un système de ventilation dernier cri qui permettra la réalisation d’économies d’énergie !
+                    <div class='link'>
 
-				<div class='link'>
-					<a href='http://www.watermael-boitsfort.be/fr/commune/services-communaux/developpement-durable-et-agenda-21/repair-cafe-reparer-ensemble-gratuitement' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Le Repair </span>Café</a>
-                    <a href='http://www.watermael-boitsfort.irisnet.be/fr/commune/services-communaux/developpement-durable-et-agenda-21/le-givekot-de-lavenue-des-archiducs' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Givekot </span></a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Watermaal Station</h2>
-				Wie heeft er geen dingen liggen die nog in goede staat zijn maar die we niet meer gebruiken? Weggooien is niet nodig, de vuilnisbakken en containerparken lopen nu al over. Laten we ze gewoon weggeven! Op 26 april 2014 organiseren we vanaf 12 uur in het station van Watermaal onze volgende «weggeefactie». Een zondag per maand kunt u overigens uw spullen op het Repair café laten herstellen.
-<p>In de givekot op de Aartshertogenlaan kunt u ook de dingen kwijt die u niet meer gebruikt maar die voor iemand anders wel van pas kunnen komen. Binnenkort komen er nieuwe Givekots op de Bezemhoek en de IJsvogellaan.
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Sportpark De drie linden</h2>
+                    In de loop van 2014 krijgt het Calypso-zwembad een nieuwe roestvrije kuip en een ventilatiesysteem van de allerlaatste generatie die mooie energiebesparingen mogelijk maakt!
+                    <div class='link'>
 
-				<div class='link'>
-					<a href='http://www.watermaal-bosvoorde.irisnet.be/nl/nieuws-1/repair-cafe-samen-en-gratis-spullen-herstellen?set_language=nl' target = '_blank'><span class='click-text'>Repair </span>café</a>
-				<a href='http://www.watermaal-bosvoorde.irisnet.be/nl/gemeente/gemeentediensten/duurzame-ontwikkeling-en-agenda21/givekot?set_language=nl' target = '_blank'><span class='click-text'>Het</span>Givekot</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-		<div class='popup' data-buttonPos='335,357'>
-			<div class='content fr'>
-				<h2>Trois Tilleuls</h2>
-				<p>La 5ème station de vélos partagés, Villo, a ouvert cette année au rond-point des Trois Tilleuls.</p>
-                <p>Pour mieux rouler à vélo dans la commune, la commune a adopté en 2013 un nouveau plan vélo. Des itinéraires cyclables communaux seront aménagés dans les années qui viennent.</p>
-				<div class='link'>
-					<a href='http://www.watermael-boitsfort.be/fr/demarches-administratives/mobilite/un-nouveau-plan-velo'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Le plan </span>vélo</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Drie Linden</h2>
-				Op de rotonde der Drie Linden werd dit jaar het 5de Villo-punt geopend. 
-<p>Onze gemeente wenst het fietsen aan te moedigen en heeft daarom in 2013 een nieuw fietsplan goedgekeurd. In de komende jaren zullen er veel gemeentelijke fietspaden aangelegd worden. </p>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
 
+            <div class='popup' data-buttonPos='618,295'>
+                <div class='content fr'>
+                    <h2>Square des Archiducs</h2>
+                    <p>
+                        La police vous accueille désormais dans le nouveau commissariat de la rue des Tritomas.
+                    </p>
+                    <p>
+                        Un nouveau plan logement pour faire face à la demande croissante de logements à prix abordables tout en préservant le caractère vert et paisible de notre commune a été adopté. Des ateliers participatifs avec les habitants auront pour objectif de dresser des lignes de conduite pour chaque terrain concerné. RDV du 19 au 29 mars 2014  pour la « semaine du logement ». Programme dans le prochain journal communal.
+                    </p>
 
-				<div class='link'>
-					<a href='http://www.watermaal-bosvoorde.irisnet.be/nl/administratieve-stappen/mobiliteit/een-nieuw-fietsplan' target = '_blank'><span class='click-text'>Een nieuw </span>fietsplan!</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-		
-		
-		<!-- <div class='popup' data-buttonPos='856,325'>
-			<div class='content fr'>
-				<h2>Axa</h2>
-				Texte Axa FR
-				<div class='link'>
-					<a href='http://www.google.com' target = '_blank'>Cliquez pour en savoir plus</a>
-				</div>
-			</div>
-			<div class='content nl'>
-				<h2>Titre en Néerlandais</h2>
-				Texte Axa NL
-				<div class='link'>
-					<a href='http://www.google.com' target = '_blank'>Klik voor meer info</a>
-				</div>			</div>
-		</div> -->
-		
-		
-		<div class='popup' data-buttonPos='70,505'>
-			<div class='content fr'>
-				<h2>Les chantiers</h2>
-				On en parle depuis 2010, aujourd’hui, c’est du concret: la construction de bassins d’orages a démarré. Une fois terminés, ces travaux protégeront des centaines de maisons, jusqu’ici régulièrement inondées. De nombreuses familles verront leur condition de vie sensiblement améliorées lors de fortes pluies. 
+                    <div class='link'>
+                        <a href='http://www.watermael-boitsfort.be/fr/dernieresnouvelles/nos-policiers-demenagent-rue-des-tritomas' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Un nouveau commissariat </span>rue des Tritomas</a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
 
-				<div class='link'>
-					<a href='http://www.watermael-boitsfort.irisnet.be/fr/commune/travaux-en-cours/construction-de-deux-bassins-dorage' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Construction de </span>deux bassins d'orage</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Werven</h2>
-				Een sinds 2010 veelbesproken onderwerp neemt eindelijk concrete vormen aan: de bouw van de stormbekkens is van start gegaan. Eens de stormbekkens klaar zullen honderden huizen die regelmatig blank stonden nu ‘boven water’ blijven en zullen de voorheen getroffen gezinnen zich geen zorgen meer moeten maken bij hevige regen. 
-				<div class='link'>
-					<a href='http://www.watermaal-bosvoorde.irisnet.be/nl/gemeente/werven/go-voor-de-bouw-van-stormbekkens' target = '_blank'><span class='click-text'>Twee </span>stormbekkens</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-		
-		
-		<div class='popup' data-buttonPos='960,346'>
-			<div class='content fr'>
-				<h2>La Sapinière</h2>
-				L’école de la Sapinière fêtait ses 100 ans en 2013, mais nos écoles communales restent toujours aussi jeunes et dynamiques ! 
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>La Sapinière</h2>
-				Alhoewel de school la Sapinière in 2013 haar honderdjarig bestaan vierde, blijven onze gemeentelijke scholen dynamisch en jong! 
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-		<div class='popup' data-buttonPos='1150,380'>
-			<div class='content fr'>
-				<h2>Cadre Staccioli</h2>
-				Vu l’intérêt de nombreux jeunes pour le rugby et le succès croissant du Boitsfort Rugby Club, un nouveau terrain synthétique sera construit en 2014 au Plateau de la Foresterie.
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Staccioli</h2>
-				Gezien de groeiende belangstelling die de jeugd voor rugby heeft en het toenemend succes van de Boitsfort Rugby Club zal er in 2014 een nieuw kunstterrein op het plateau van de Vorsterij aangelegd worden. 
-				<div class='link'>
-					
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-		
-		<!-- <div class='popup' data-buttonPos='777,532'>
-			<div class='content fr'>
-				<h2>Commerce</h2>
-				Texte Commerce FR
-				<div class='link'>
-					<a href='http://www.google.com' target = '_blank'>en savoir plus</a>
-				</div>
-			</div>
-			<div class='content nl'>
-				<h2>Titre en Néerlandais</h2>
-				Texte Commerce NL
-				<div class='link'>
-					
-				</div>
-			</div>
-		</div>-->
-		
-		
-		<div class='popup' data-buttonPos='1035,293'>
-			<div class='content fr'>
-				<h2>La forêt</h2>
-				Les renards sortent de plus en plus de la forêt pour dévorer nos poubelles. Pour éviter les sacs éventrés sur le trottoir, la commune met à disposition des habitants qui le demandent une poubelle rigide. 
-				<div class='link'>
-					<a href='http://www.watermael-boitsfort.irisnet.be/fr/dernieresnouvelles/proprete-publique-engagez-vous' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Commandez votre poubelle </span>en plastique dur</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT .FR -->
-			<div class='content nl'>
-				<h2>Het Zoniënwoud</h2>
-				Hoe langer hoe meer vossen verlaten de wouden om in onze vuilniszakken te snuffelen. Om opengescheurde vuilniszakken te vermijden, stelt de gemeente harde vuilnisbakken ter beschikking voor de bewoners die dit wensen.  
-				<div class='link'>
-					<a href='http://www.watermaal-bosvoorde.irisnet.be/nl/nieuws-1/netheid-zet-jullie-in?set_language=nl' target = '_blank'><span class='click-text'>Netheid: zet jullie </span>in</a>
-				</div><!-- END .LINK -->
-			</div><!-- END .CONTENT . NL-->
-		</div><!-- END .POPUP-->
-		
-</div><!-- END .POPUPS-->
-	</body>
+                <div class='content nl'>
+                    <h2>Aartshertogensquare</h2>
+                    <p>
+                        De politie onthaalt u nu in een nieuw commissariaat in de Tritomasstraat.
+                    </p>
+                    <p>
+                        Een nieuw huisvestingsplan als antwoord op de groeiende vraag naar betaalbare woningen, maar met het behoud van het groene en landelijke karakter van onze gemeente. De participatieve workshops met de bewoners hebben tot doel specifieke gedragregels uit te tekenen. Kruis alvast de week van 19 tot 29 maart 2014 aan voor de « Week van het wonen ». Programma volgt in het volgende gemeenteblad.
+                    </p>
+
+                    <div class='link'>
+
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
+
+            <div class='popup' data-buttonPos='238,436'>
+                <div class='content fr'>
+                    <h2>Eglise St-Hubert </h2>
+                    <p>
+                        En accord avec l’Evêché, une nouvelle affectation pour l’église Saint-Hubert est désormais possible. Bientôt du logement à Saint-Hubert ?
+                    </p>
+                    <div class='link'>
+
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Sint-Hubertuskerk</h2>
+                    In afspraak met het Bisdom zal de Sint-Hubertuskerk een andere bestemming krijgen. Zin om in een kerk te wonen?
+                    <div class='link'>
+
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
+
+            <div class='popup' data-buttonPos='40,370'>
+                <div class='content fr'>
+                    <h2>Gare de Watermael</h2>
+                    <p>
+                        Nous possédons des objets utiles et encore en bon état, mais dont nous n'avons plus l'usage? Ne les jetons pas, n'encombrons pas les poubelles, les décharges, les déchetteries, les parcs à conteneurs, pratiquons la solidarité et la simplicité: donnons-les! La «donnerie» aura à nouveau lieu à la gare de Watermael le 26 avril 2014 à partir de 12h.
+                    </p>
+                    <p>
+                        Un dimanche par mois, venez aussi y faire réparer vos objets au Repair café.
+                    </p>
+                    <p>
+                        Avenue des Archiducs, le givekot reçoit également les objets que vous n’utilisez plus et qui peuvent servir à quelqu’un d’autre. D’autres Givekots seront bientôt placés au Coin du Balai et avenue du Martin-Pêcheur.
+                    </p>
+
+                    <div class='link'>
+                        <a href='http://www.watermael-boitsfort.be/fr/commune/services-communaux/developpement-durable-et-agenda-21/repair-cafe-reparer-ensemble-gratuitement' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Le Repair </span>Café</a>
+                        <a href='http://www.watermael-boitsfort.irisnet.be/fr/commune/services-communaux/developpement-durable-et-agenda-21/le-givekot-de-lavenue-des-archiducs' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Givekot </span></a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Watermaal Station</h2>
+                    Wie heeft er geen dingen liggen die nog in goede staat zijn maar die we niet meer gebruiken? Weggooien is niet nodig, de vuilnisbakken en containerparken lopen nu al over. Laten we ze gewoon weggeven! Op 26 april 2014 organiseren we vanaf 12 uur in het station van Watermaal onze volgende «weggeefactie». Een zondag per maand kunt u overigens uw spullen op het Repair café laten herstellen.
+                    <p>
+                        In de givekot op de Aartshertogenlaan kunt u ook de dingen kwijt die u niet meer gebruikt maar die voor iemand anders wel van pas kunnen komen. Binnenkort komen er nieuwe Givekots op de Bezemhoek en de IJsvogellaan.
+
+                        <div class='link'>
+                            <a href='http://www.watermaal-bosvoorde.irisnet.be/nl/nieuws-1/repair-cafe-samen-en-gratis-spullen-herstellen?set_language=nl' target = '_blank'><span class='click-text'>Repair </span>café</a>
+                            <a href='http://www.watermaal-bosvoorde.irisnet.be/nl/gemeente/gemeentediensten/duurzame-ontwikkeling-en-agenda21/givekot?set_language=nl' target = '_blank'><span class='click-text'>Het</span>Givekot</a>
+                        </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
+
+            <div class='popup' data-buttonPos='335,357'>
+                <div class='content fr'>
+                    <h2>Trois Tilleuls</h2>
+                    <p>
+                        La 5ème station de vélos partagés, Villo, a ouvert cette année au rond-point des Trois Tilleuls.
+                    </p>
+                    <p>
+                        Pour mieux rouler à vélo dans la commune, la commune a adopté en 2013 un nouveau plan vélo. Des itinéraires cyclables communaux seront aménagés dans les années qui viennent.
+                    </p>
+                    <div class='link'>
+                        <a href='http://www.watermael-boitsfort.be/fr/demarches-administratives/mobilite/un-nouveau-plan-velo'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Le plan </span>vélo</a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Drie Linden</h2>
+                    Op de rotonde der Drie Linden werd dit jaar het 5de Villo-punt geopend.
+                    <p>
+                        Onze gemeente wenst het fietsen aan te moedigen en heeft daarom in 2013 een nieuw fietsplan goedgekeurd. In de komende jaren zullen er veel gemeentelijke fietspaden aangelegd worden.
+                    </p>
+
+                    <div class='link'>
+                        <a href='http://www.watermaal-bosvoorde.irisnet.be/nl/administratieve-stappen/mobiliteit/een-nieuw-fietsplan' target = '_blank'><span class='click-text'>Een nieuw </span>fietsplan!</a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
+
+            <!-- <div class='popup' data-buttonPos='856,325'>
+            <div class='content fr'>
+            <h2>Axa</h2>
+            Texte Axa FR
+            <div class='link'>
+            <a href='http://www.google.com' target = '_blank'>Cliquez pour en savoir plus</a>
+            </div>
+            </div>
+            <div class='content nl'>
+            <h2>Titre en Néerlandais</h2>
+            Texte Axa NL
+            <div class='link'>
+            <a href='http://www.google.com' target = '_blank'>Klik voor meer info</a>
+            </div>			</div>
+            </div> -->
+
+            <div class='popup' data-buttonPos='70,505'>
+                <div class='content fr'>
+                    <h2>Les chantiers</h2>
+                    On en parle depuis 2010, aujourd’hui, c’est du concret: la construction de bassins d’orages a démarré. Une fois terminés, ces travaux protégeront des centaines de maisons, jusqu’ici régulièrement inondées. De nombreuses familles verront leur condition de vie sensiblement améliorées lors de fortes pluies.
+
+                    <div class='link'>
+                        <a href='http://www.watermael-boitsfort.irisnet.be/fr/commune/travaux-en-cours/construction-de-deux-bassins-dorage' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Construction de </span>deux bassins d'orage</a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Werven</h2>
+                    Een sinds 2010 veelbesproken onderwerp neemt eindelijk concrete vormen aan: de bouw van de stormbekkens is van start gegaan. Eens de stormbekkens klaar zullen honderden huizen die regelmatig blank stonden nu ‘boven water’ blijven en zullen de voorheen getroffen gezinnen zich geen zorgen meer moeten maken bij hevige regen.
+                    <div class='link'>
+                        <a href='http://www.watermaal-bosvoorde.irisnet.be/nl/gemeente/werven/go-voor-de-bouw-van-stormbekkens' target = '_blank'><span class='click-text'>Twee </span>stormbekkens</a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
+
+            <div class='popup' data-buttonPos='960,346'>
+                <div class='content fr'>
+                    <h2>La Sapinière</h2>
+                    L’école de la Sapinière fêtait ses 100 ans en 2013, mais nos écoles communales restent toujours aussi jeunes et dynamiques !
+                    <div class='link'>
+
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>La Sapinière</h2>
+                    Alhoewel de school la Sapinière in 2013 haar honderdjarig bestaan vierde, blijven onze gemeentelijke scholen dynamisch en jong!
+                    <div class='link'>
+
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
+
+            <div class='popup' data-buttonPos='1150,380'>
+                <div class='content fr'>
+                    <h2>Cadre Staccioli</h2>
+                    Vu l’intérêt de nombreux jeunes pour le rugby et le succès croissant du Boitsfort Rugby Club, un nouveau terrain synthétique sera construit en 2014 au Plateau de la Foresterie.
+                    <div class='link'>
+
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Staccioli</h2>
+                    Gezien de groeiende belangstelling die de jeugd voor rugby heeft en het toenemend succes van de Boitsfort Rugby Club zal er in 2014 een nieuw kunstterrein op het plateau van de Vorsterij aangelegd worden.
+                    <div class='link'>
+
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
+
+            <!-- <div class='popup' data-buttonPos='777,532'>
+            <div class='content fr'>
+            <h2>Commerce</h2>
+            Texte Commerce FR
+            <div class='link'>
+            <a href='http://www.google.com' target = '_blank'>en savoir plus</a>
+            </div>
+            </div>
+            <div class='content nl'>
+            <h2>Titre en Néerlandais</h2>
+            Texte Commerce NL
+            <div class='link'>
+
+            </div>
+            </div>
+            </div>-->
+
+            <div class='popup' data-buttonPos='1035,293'>
+                <div class='content fr'>
+                    <h2>La forêt</h2>
+                    Les renards sortent de plus en plus de la forêt pour dévorer nos poubelles. Pour éviter les sacs éventrés sur le trottoir, la commune met à disposition des habitants qui le demandent une poubelle rigide.
+                    <div class='link'>
+                        <a href='http://www.watermael-boitsfort.irisnet.be/fr/dernieresnouvelles/proprete-publique-engagez-vous' target = '_blank'><!-- Le SPAN qui suit est effacé dans la version mobile !--><span class='click-text'>Commandez votre poubelle </span>en plastique dur</a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT .FR -->
+                <div class='content nl'>
+                    <h2>Het Zoniënwoud</h2>
+                    Hoe langer hoe meer vossen verlaten de wouden om in onze vuilniszakken te snuffelen. Om opengescheurde vuilniszakken te vermijden, stelt de gemeente harde vuilnisbakken ter beschikking voor de bewoners die dit wensen.
+                    <div class='link'>
+                        <a href='http://www.watermaal-bosvoorde.irisnet.be/nl/nieuws-1/netheid-zet-jullie-in?set_language=nl' target = '_blank'><span class='click-text'>Netheid: zet jullie </span>in</a>
+                    </div><!-- END .LINK -->
+                </div><!-- END .CONTENT . NL-->
+            </div><!-- END .POPUP-->
+
+        </div><!-- END .POPUPS-->
+    </body>
 </html>
