@@ -146,7 +146,7 @@ opacity:0;
     cursor: pointer;
     border-radius: 2px;
 }
-.touch .closeButton {
+.touch .closeButton, .ie8 .closeButton  {
 
     height: 24px;
     width: 24px;
@@ -297,15 +297,18 @@ h1 {
     left: 100px;
     cursor: pointer;
 }
-.touch .button {
+.ie8 .button, .touch .button, .ie8 .button:hover {
        width: 45px;
     height: 45px;
+    
     
     
 }
 
 .button:hover {
     background: url('../img/button0002.png');
+       background-position: center;
+    background-repeat: no-repeat;
     background-size: 100%;
 }
 
